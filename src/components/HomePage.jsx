@@ -56,12 +56,12 @@ const HomePage = () => {
     </nav>
 
      <div className='h-screen flex items-center justify-center'>
-        <div className="text-center mx-auto flex flex-col items-center md:gap-10 xs:gap-5">
-                <h1 className="md:text-6xl xs:text-3xl font-semibold text-white">
+        <div className="text-center mx-auto flex flex-col items-center md:gap-10 xs:gap-8">
+                <h1 className="md:text-6xl xs:text-4xl font-semibold text-white">
                     Welcome to Jasha Consulting Service!
                 </h1>
-                <p className="font-light md:text-4xl xs:text-xl text-white-100">Your trusted partner since 2005</p>
-                <a href="" className="px-8 py-2 inline-block bg-primary text-white font-light md:text-3xl xs:text-xl rounded-lg hover:bg-transparent hover:border-2 hover:border-black">Get Started</a>
+                <p className="font-light md:text-4xl xs:text-2xl text-white-100">Your trusted partner since 2005</p>
+                <a href="" className="px-8 py-2 inline-block bg-primary text-white font-light md:text-3xl xs:text-2xl rounded-lg hover:bg-transparent hover:border-2 hover:border-black">Get Started</a>
         </div>
     </div>
 
