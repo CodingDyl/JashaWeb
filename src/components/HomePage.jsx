@@ -56,16 +56,16 @@ const HomePage = () => {
     </nav>
 
      <div className='h-screen flex items-center justify-center'>
-        <div className="text-center mx-auto flex flex-col items-center md:gap-10 xs:gap-8">
-                <h1 className="md:text-6xl xs:text-4xl font-semibold text-white">
+        <div className="text-center mx-auto flex flex-col items-center gap-8 md:gap-10">
+                <h1 className="text-3xl md:text-6xl font-semibold text-white" >
                     Welcome to Jasha Consulting Service!
                 </h1>
-                <p className="font-light md:text-4xl xs:text-2xl text-white-100">Your trusted partner since 2005</p>
-                <a href="" className="px-8 py-2 inline-block bg-primary text-white font-light md:text-3xl xs:text-2xl rounded-lg hover:bg-transparent hover:border-2 hover:border-black">Get Started</a>
+                <p className="font-light text-3xl md:text-4xl text-white-100">Your trusted partner since 2005</p>
+                <a href="" className="px-8 py-2 inline-block bg-primary text-white font-light md:text-3xl text-2xl rounded-lg hover:bg-transparent hover:border-2 hover:border-black">Get Started</a>
         </div>
     </div>
 
-    <div className="absolute xs:bottom-20 md:bottom-20 w-full flex justify-center items-center">
+    <div className="absolute bottom-40 md:bottom-20 w-full flex justify-center items-center">
         <a href={`#about`}>
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-tertiary flex justify-center items-start p-2">
             <motion.div animate={{y: [0, 24, 0]}} transition={{duration: 1.5, repeat: Infinity, repeatType: 'loop' }} className="w-3 h-3 rounded-full bg-tertiary mb-1"/>
