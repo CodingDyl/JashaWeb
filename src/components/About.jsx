@@ -13,7 +13,7 @@ const About = () => {
         className={`${styles.padding} max-w-7xl mx-auto relative z-0 min-h-screen`}
     >
 
-        <span id='#about'>
+        <span id='about'>
             &nbsp;  
         </span>
 

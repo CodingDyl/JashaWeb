@@ -28,7 +28,7 @@ export function Contact() {
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
 
-        <span id='#contact'>
+        <span id='contact'>
             &nbsp;  
         </span>
 
