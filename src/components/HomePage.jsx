@@ -73,8 +73,6 @@ const HomePage = () => {
         </a>
       </div>
     </section>
-
-    <section className='min-h-screen bg-black'></section>
     </>
   )
 }
