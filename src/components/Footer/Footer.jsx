@@ -25,7 +25,7 @@ export function Footer() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <img src={logo_bg} alt='logo' size={5} className='w-20 h-20' />
+        <img src={logo_bg} alt='logo' size={5} className='h-10 object-contain' />
         <Group className={classes.links}>{items}</Group>
       </Container>
     </div>

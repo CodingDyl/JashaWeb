@@ -17,7 +17,7 @@ const HomePage = () => {
         <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-[rgba(0, 0, 0, 0.6)]`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2" onClick={() => { setActive(""); window.scrollTo(0, 0); }}>
-          <img src={logo_bg} alt="logo" className="h-10 object-contain" />
+          <img src={logo_bg} alt="logo" className="h-10 object-contain border-0" />
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10 items-center">
           {navLinks.map((link) => (
