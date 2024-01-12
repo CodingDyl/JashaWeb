@@ -2,9 +2,11 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { styles } from '../styles';
 import { staggerContainer, fadeIn, textVariant } from '../utils/motion'
+import { FeaturesAsymmetrical } from './FeaturesSection/FeaturesAsymmetrical';
 
 const About = () => {
   return (
+    <>
     <motion.section
         variants={staggerContainer()}
         initial='hidden'
@@ -29,9 +31,12 @@ const About = () => {
  Jasha Consulting Services have over 40 years combined knowledge and experience and are ready to facilitate clients with there needs
           </motion.p>
 
+          <FeaturesAsymmetrical />
+
 
 
     </motion.section>
+    </>
   )
 }
 

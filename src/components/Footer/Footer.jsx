@@ -3,9 +3,9 @@ import { logo_bg } from '../../assets';
 import classes from './Footer.module.css';
 
 const links = [
-  { link: '#', label: 'Contact' },
+  { link: 'contact', label: 'Contact' },
   { link: '#', label: 'Privacy' },
-  { link: '#', label: 'About' },
+  { link: '#about', label: 'About' },
   { link: '#', label: 'Learn More' },
 ];
 
