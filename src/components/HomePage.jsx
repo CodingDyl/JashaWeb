@@ -58,7 +58,7 @@ const HomePage = () => {
      <div className='h-screen flex items-center justify-center'>
         <div className="text-center mx-auto flex flex-col items-center gap-8 md:gap-10">
                 <h1 className="text-4xl md:text-6xl font-semibold text-white" >
-                    Welcome to Jasha Consulting Service!
+                    Welcome to Jasha Consulting Services
                 </h1>
                 <p className="font-light text-xl md:text-4xl text-white-100">Your trusted partner since 2005</p>
                 <a href="" className="px-8 py-2 inline-block bg-primary/80 text-white font-light md:text-3xl text-xl rounded-xl hover:bg-transparent hover:border-2 hover:border-black">Get Started</a>

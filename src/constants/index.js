@@ -9,7 +9,7 @@ const navLinks = [
     },
     {
         id: "#contact",
-        title: "Contact US"
+        title: "Contact Us"
     },
 ];
 
