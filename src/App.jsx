@@ -5,7 +5,7 @@ import '@mantine/core/styles.css';
 import About from "./components/About";
 import { Footer } from "./components/Footer/Footer";
 import { Contact } from "./components/Contact";
-import { Faq } from "./components/FAQ/faq";
+import Offer from "./components/Offer";
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
     <div className="z-0 bg-primary text-white">
       <HomePage />
       <About />
-      <Faq />
+      <Offer />
       <Contact />
       <Footer />
     </div>
