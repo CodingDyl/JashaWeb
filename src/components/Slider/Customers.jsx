@@ -50,7 +50,7 @@ export default class Customers extends Component {
             <>
 
             <motion.div variants={textVariant}>
-                <h2 className={styles.sectionHeadText}>Our Customers.</h2>
+            <p className={styles.sectionSubText}>Our Customers.</p>
             </motion.div>
             <div className="mainContainer">
                 <Slider {...settings}>
