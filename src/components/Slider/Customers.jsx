@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {anglo, air_products, aeci, mondi, natref, omnia} from '../../assets'
+import {anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol} from '../../assets'
 import { motion } from "framer-motion";
 import { textVariant } from "../../utils/motion";
 import { styles } from "../../styles";
@@ -71,6 +71,15 @@ export default class Customers extends Component {
                     </div>
                     <div className="container">
                         <img src={omnia} alt="ISS" className="md:w-[220px] sm:-[150px]"/>
+                    </div>
+                    <div className="container">
+                        <img src={safripol} alt="ISS" className="md:w-[220px] sm:-[150px]"/>
+                    </div>
+                    <div className="container">
+                        <img src={sappi} alt="ISS" className="md:w-[220px] sm:-[150px]"/>
+                    </div>
+                    <div className="container">
+                        <img src={sasol} alt="ISS" className="md:w-[220px] sm:-[150px]"/>
                     </div>
                 </Slider>
             </div>
