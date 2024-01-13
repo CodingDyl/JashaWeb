@@ -11,10 +11,10 @@ const HomePage = () => {
     const [toggle, setToggle] = useState(false);
   return (
     <>
-    <section className="bg-pattern-sm md:bg-bg-pattern bg-cover bg-no-repeat bg-center bg-blend-overlay md:bg-fixed bg-black/40 md:bg-black/60">
+    <section className="bg-pattern-sm md:bg-bg-pattern bg-cover bg-no-repeat bg-center bg-blend-overlay md:bg-fixed md:bg-black/60">
 
         {/* Nav Section */}
-        <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-[rgba(0, 0, 0, 0.6)]`}>
+      <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-black/40 md:bg-transparent`}>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2" onClick={() => { setActive(""); window.scrollTo(0, 0); }}>
           <img src={logo_bg} alt="logo" className="h-10 object-contain border-0" />
@@ -61,7 +61,7 @@ const HomePage = () => {
                     Welcome to Jasha Consulting Services
                 </h1>
                 <p className="font-light text-xl md:text-4xl text-white-100">Your trusted partner since 2005</p>
-                <a href="" className="px-8 py-2.5 inline-block bg-primary/80 text-white font-light md:text-3xl text-xl rounded-xl hover:bg-transparent hover:border-2 hover:border-black">Get Started</a>
+                <a href="#contact" className="px-8 py-2.5 inline-block bg-primary/80 text-white font-light md:text-3xl text-xl rounded-xl hover:bg-transparent hover:border-2 hover:border-black">Get In Touch</a>
         </div>
     </div>
 

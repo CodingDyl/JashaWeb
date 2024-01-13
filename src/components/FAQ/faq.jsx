@@ -37,7 +37,7 @@ export function Faq() {
 
               <Accordion.Item className={classes.item} value="credit-card">
                 <Accordion.Control>
-                  What payments do you guys accepted?
+                  Can I Pay Online?
                 </Accordion.Control>
                 <Accordion.Panel className='text-[#808080]'>{placeholder}</Accordion.Panel>
               </Accordion.Item>
