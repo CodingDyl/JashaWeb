@@ -1,10 +1,44 @@
-import { TextInput, Textarea, SimpleGrid, Group, Title, Button } from '@mantine/core';
+import { TextInput, Textarea, SimpleGrid, Group, Title, Button, Text } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { motion } from 'framer-motion';
 import { textVariant, staggerContainer } from '../utils/motion';
 import { styles } from '../styles';
+import { contactPeople } from '../constants';
+import { IconPhoneCall, IconAt } from '@tabler/icons-react';
 
 export function Contact() {
+  const EmployeeCard = ({ name, cell, email, position }) => (
+    <Group wrap="nowrap" className='bg-black/75 mt-10 border-solid border-white-100 w-full border-2 p-2 lg:p-4 rounded-xl'>
+    {/* <Avatar
+      src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png"
+      size={94}
+      radius="md"
+    /> */}
+    <div>
+      <Text fz="xs" tt="uppercase" fw={700} c="dimmed">
+        {position}
+      </Text>
+
+      <Text fz="md" fw={500} truncate>
+        {name}
+      </Text>
+
+      <Group wrap="nowrap" gap={5} mt={3}>
+        <IconAt stroke={1.5} size="1rem" />
+        <Text fz="xs" c="dimmed" truncate>
+          {email}
+        </Text>
+      </Group>
+
+      <Group wrap="nowrap" gap={10} mt={5}>
+        <IconPhoneCall stroke={1.5} size="1rem" />
+        <Text fz="xs" c="dimmed">
+          {cell}
+        </Text>
+      </Group>
+    </div>
+  </Group>
+)
   const form = useForm({
     initialValues: {
       name: '',
@@ -20,6 +54,10 @@ export function Contact() {
   });
 
   return (
+    <>
+    <span id='contact'>
+            &nbsp;  
+        </span>
     <motion.section
         variants={staggerContainer()}
         initial='hidden'
@@ -28,9 +66,7 @@ export function Contact() {
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
 
-        <span id='contact'>
-            &nbsp;  
-        </span>
+        
 
         <div className='bg-tertiary/20 rounded-lg p-10'>
 
@@ -83,6 +119,13 @@ export function Contact() {
       </Group>
     </form>
     </div>
+
+    <div className='flex flex-col gap-4 md:flex-row w-[100%] mb-10 justify-center md:justify-between items-center'>
+        {contactPeople.map((contact) => (
+              <EmployeeCard key={contact.name} {...contact}/>
+        ))}
+    </div>
     </motion.section>
+    </>
   );
 }

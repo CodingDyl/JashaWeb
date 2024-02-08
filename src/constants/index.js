@@ -13,6 +13,27 @@ const navLinks = [
     },
 ];
 
+const contactPeople = [
+    {
+      name: 'Billy Butcher',
+      email: 'jsc@email.co.za',
+      cell: '079 796 3113',
+      position: 'Jasha Consultant'
+    },
+    {
+      name: 'Donald Swab',
+      email: 'random@email.com',
+      cell: '083 548 4541',
+      position: 'Knit Wire Consaltant'
+    },
+    {
+      name: 'John Doe',
+      email: 'email@email.com',
+      cell: '082 325 4053',
+      position: 'Bio Fuel Consultant'
+    },
+  ];
+
 const footerLinks = [
     {
         title: "About",
@@ -73,4 +94,4 @@ const footerLinks = [
     }
 ];
 
-export {navLinks, footerLinks};
+export {navLinks, footerLinks, contactPeople};
