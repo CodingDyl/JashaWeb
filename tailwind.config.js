@@ -31,7 +31,7 @@ export default {
         xs: "450px",
       },
       backgroundImage: {
-        "bg-pattern": "url('/src/assets/background_img.jpg')",
+        "bg-pattern": "url('/src/assets/bg_jasha_home.jpg')",
         "pattern-sm": "url('/src/assets/background_sm.jpg')"
       },
     },
