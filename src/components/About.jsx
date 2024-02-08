@@ -8,17 +8,16 @@ import Customers from './Slider/Customers';
 const About = () => {
   return (
     <>
+    <span id='about'>
+            &nbsp;  
+        </span>
     <motion.section
         variants={staggerContainer()}
         initial='hidden'
         whileInView='show'
         viewport={{once: true, amount: 0.25}}
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0 min-h-screen`}
+        className={`${styles.padding} max-w-7xl mx-auto relative z-0 min-h-screen flex flex-col justify-center items-start`}
     >
-
-        <span id='about'>
-            &nbsp;  
-        </span>
 
         <motion.div variants={textVariant}>
             <p className={styles.sectionSubText}>Introduction.</p>
@@ -31,8 +30,6 @@ const About = () => {
   
  Jasha Consulting Services have over 40 years combined knowledge and experience and are ready to facilitate clients with there needs
           </motion.p>
-
-          <Customers />
 
     </motion.section>
     </>

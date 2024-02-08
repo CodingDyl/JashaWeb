@@ -8,6 +8,9 @@ import { Faq } from './FAQ/faq'
 const Offer = () => {
   return (
     <>
+    <span id='offer'>
+            &nbsp;  
+        </span>
     <motion.section
         variants={staggerContainer()}
         initial='hidden'
@@ -15,9 +18,6 @@ const Offer = () => {
         viewport={{once: true, amount: 0.25}}
         className={`${styles.padding} max-w-7xl mx-auto relative z-0 min-h-screen`}
     >
-        <span id='offer'>
-            &nbsp;  
-        </span>
 
         <motion.div variants={textVariant}>
             <p className={styles.sectionSubText}>What we offer</p>

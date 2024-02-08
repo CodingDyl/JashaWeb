@@ -10,5 +10,6 @@ import omnia from './omnia.jpg';
 import safripol from './safripol.png';
 import sappi from './sappi.png';
 import sasol from './sasol.png';
+import knitwire from './knitwire_logo.png'
 
-export {logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol}
+export {logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol, knitwire}

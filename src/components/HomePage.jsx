@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { MdClose, MdMenu } from 'react-icons/md';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
-import { logo_bg } from '../assets';
-import { motion } from 'framer-motion'
+import { knitwire, logo_bg } from '../assets';
+import { motion } from 'framer-motion';
+import Customers from './Slider/Customers';
+import { Button } from '@mantine/core';
+import { IconDownload } from '@tabler/icons-react';
 
 const HomePage = () => {
     const [active, setActive] = useState("");
@@ -55,15 +58,23 @@ const HomePage = () => {
       </div>
     </nav>
 
-     <div className='h-screen flex items-center justify-center'>
+     <div className="min-h-screen flex items-center justify-center">
         <div className="text-center mx-auto flex flex-col items-center gap-8 md:gap-10">
                 <h1 className="text-4xl md:text-6xl font-semibold text-white" >
                     Welcome to Jasha Consulting Services
                 </h1>
                 <p className="font-light text-xl md:text-4xl text-white-100">Your trusted partner since 2005</p>
-                <a href="#contact" className="px-8 py-2.5 inline-block bg-primary/80 text-white font-light md:text-3xl text-xl rounded-xl hover:bg-transparent hover:border-2 hover:border-black">Get In Touch</a>
+                <div className='flex flex-col w-full gap-4 items-center'>
+                    <div className='flex flex-col md:flex-row gap-4 md:gap-2'>
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]'>JSC Services</Button>
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]'><img src={knitwire} alt='knitwire logo' className='bg-cover bg-no-repeat' /></Button>
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[320px]' rightSection={<IconDownload size={20} />} >Bio Dynamic Fuel</Button>
+                    </div>
+                </div>
         </div>
     </div>
+
+    <Customers />
 
     <div className="absolute bottom-10 md:bottom-20 w-full flex justify-center items-center">
         <a href={`#about`}>

@@ -48,11 +48,7 @@ export default class Customers extends Component {
         };
         return (
             <>
-
-            <motion.div variants={textVariant}>
-            <p className={styles.sectionSubText}>Our Customers.</p>
-            </motion.div>
-            <div className="mainContainer">
+            <div className="mainContainer mx-10 px-10">
                 <Slider {...settings}>
                     <div className="container">
                         <img src={anglo}  alt="mpact" className="md:w-[220px] sm:-[150px]"/>
