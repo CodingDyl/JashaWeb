@@ -66,7 +66,7 @@ const HomePage = () => {
                 <p className="font-light text-xl md:text-4xl text-white-100">Your trusted partner since 2005</p>
                 <div className='flex flex-col w-full gap-4 items-center'>
                     <div className='flex flex-col md:flex-row gap-4 md:gap-2'>
-                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]'>JSC Services</Button>
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]'><a href="#offer">JSC Services</a></Button>
                       <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]'><img src={knitwire} alt='knitwire logo' className='bg-cover bg-no-repeat' /></Button>
                       <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[320px]' rightSection={<IconDownload size={20} />} >Bio Dynamic Fuel</Button>
                     </div>

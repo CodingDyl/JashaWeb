@@ -1,5 +1,5 @@
 import { Text, SimpleGrid, Container, rem } from '@mantine/core';
-import { IconTruck, IconCertificate, IconCoin } from '@tabler/icons-react';
+import { IconCircleCheckFilled } from '@tabler/icons-react';
 import classes from './FeaturesAsymmetrical.module.css';
 
 function Feature({ icon: Icon, title, description, className, ...others }) {
@@ -8,7 +8,7 @@ function Feature({ icon: Icon, title, description, className, ...others }) {
       <div className={classes.overlay} />
 
       <div className={classes.content}>
-        <Icon style={{ width: rem(38), height: rem(38) }} className={classes.icon} stroke={1.5} />
+        <Icon style={{ width: rem(38), height: rem(38) }} className={classes.icon} stroke={2} />
         <Text fw={700} fz="lg" mb="xs" mt={5} className={classes.title}>
           {title}
         </Text>
@@ -22,22 +22,34 @@ function Feature({ icon: Icon, title, description, className, ...others }) {
 
 const mockdata = [
   {
-    icon: IconTruck,
-    title: 'Free Worldwide shipping',
+    icon: IconCircleCheckFilled,
+    title: 'Stainless Steel Fabrication',
     description:
-      'As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity.',
+      'Precision stainless steel fabrication service for diverse industrial applications across South Africa',
   },
   {
-    icon: IconCertificate,
-    title: 'Best Quality Product',
+    icon: IconCircleCheckFilled,
+    title: 'Mild Steel Fabrication',
     description:
-      'Slakoth’s heart beats just once a minute. Whatever happens, it is content to loaf around motionless.',
+      'Custom mild steel fabrication for durable structural and architectural projects.',
   },
   {
-    icon: IconCoin,
-    title: 'Very Affordable Pricing',
+    icon: IconCircleCheckFilled,
+    title: 'Plastic Fabrication',
     description:
-      'Thought to have gone extinct, Relicanth was given a name that is a variation of the name of the person who discovered.',
+      'Specialized plastic fabrication providing versatile solutions for various industrial needs.',
+  },
+  {
+    icon: IconCircleCheckFilled,
+    title: 'Piping',
+    description:
+      'Efficient piping solutions ensuring seamless flow for industrial and commercial systems.',
+  },
+  {
+    icon: IconCircleCheckFilled,
+    title: 'Cut to Size',
+    description:
+      'Precision cut-to-size services for materials tailored to specific project requirements.',
   },
 ];
 
