@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { textVariant, staggerContainer } from '../utils/motion'
 import { styles } from '../styles'
 import { Faq } from './FAQ/faq'
+import ImageListJasha from './ImagesList/ImageListJasha'
 
 const Offer = () => {
   return (
@@ -25,6 +26,8 @@ const Offer = () => {
         </motion.div>
 
         <FeaturesAsymmetrical />
+
+        <ImageListJasha />
 
         <Faq />
         </motion.section>

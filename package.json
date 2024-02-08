@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@mantine/core": "^7.4.1",
     "@mantine/form": "^7.4.1",
+    "@mui/material": "^5.15.9",
     "@tabler/icons-react": "^2.45.0",
     "framer-motion": "^10.18.0",
     "lottie-react": "^2.4.0",

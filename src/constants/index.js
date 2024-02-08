@@ -1,3 +1,5 @@
+import { Image1, Image3, Image10, Image4, Image5, Image7, Image8, Image9, Image11, Image12, Image2, Image6 } from "../assets";
+
 const navLinks = [
     {
         id: "#about",
@@ -94,4 +96,55 @@ const footerLinks = [
     }
 ];
 
-export {navLinks, footerLinks, contactPeople};
+const jashaGal = [
+    {
+      img: Image1,
+      title: 'JSC',
+    },
+    {
+      img: Image2,
+      title: 'JSC',
+    },
+    {
+      img: Image3,
+      title: 'JSC',
+    },
+    {
+      img: Image4,
+      title: 'JSC',
+    },
+    {
+      img: Image5,
+      title: 'JSC',
+    },
+    {
+      img: Image6,
+      title: 'JSC',
+    },
+    {
+      img: Image7,
+      title: 'JSC',
+    },
+    {
+      img: Image8,
+      title: 'JSC',
+    },
+    {
+      img: Image9,
+      title: 'JSC',
+    },
+    {
+      img: Image10,
+      title: 'JSC',
+    },
+    {
+      img: Image11,
+      title: 'JSC',
+    },
+    {
+      img: Image12,
+      title: 'JSC',
+    },
+  ];
+
+export {navLinks, footerLinks, contactPeople, jashaGal};
