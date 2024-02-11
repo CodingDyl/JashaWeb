@@ -3,8 +3,13 @@ import classes from './Faq.module.css';
 import Lottie from 'lottie-react';
 import animationData from '../../assets/faq_img.json'
 
-const placeholder =
-  'It can’t help but hear a pin drop from over half a mile away, so it lives deep in the mountains where there aren’t many people or Pokémon.';
+const fa1 = '59 Aletta Avenue 1609 Edenvale - Eden Glen Ext 18 Gauteng - SouthAfrica';
+
+const fa2 = "Our services encompass a wide range of offerings, including precision stainless steel fabrication tailored for diverse industrial applications, custom mild steel fabrication for durable projects, specialized plastic fabrication for versatile industrial solutions, efficient piping solutions ensuring seamless flow for various systems, and precision cut-to-size services to meet specific material requirements."
+
+const fa3 = 'We currently do not have a review system. Should you require any assistance or want to leave a review please contact us directly and we can assist you.'
+
+const fa4 = 'Yes! Jasha, Knitwire and Bio Dynamic Fuel can all be found in one place to solve any problem you may have. Contact US today for any service you may aquire from these companies.'
 
 export function Faq() {
   return (
@@ -22,24 +27,24 @@ export function Faq() {
             <Accordion chevronPosition="right" defaultValue="reset-password" variant="separated">
               <Accordion.Item className={classes.item} value="reset-password">
                 <Accordion.Control>Where can I find you guys?</Accordion.Control>
-                <Accordion.Panel className='text-[#808080]'>{placeholder}</Accordion.Panel>
+                <Accordion.Panel className='text-[#808080]'>{fa1}</Accordion.Panel>
               </Accordion.Item>
 
               <Accordion.Item className={classes.item} value="another-account">
                 <Accordion.Control>What services do you offer?</Accordion.Control>
-                <Accordion.Panel className='text-[#808080]'>{placeholder}</Accordion.Panel>
+                <Accordion.Panel className='text-[#808080]'>{fa2}</Accordion.Panel>
               </Accordion.Item>
 
               <Accordion.Item className={classes.item} value="newsletter">
                 <Accordion.Control>How can I leave a review?</Accordion.Control>
-                <Accordion.Panel className='text-[#808080]'>{placeholder}</Accordion.Panel>
+                <Accordion.Panel className='text-[#808080]'>{fa3}</Accordion.Panel>
               </Accordion.Item>
 
               <Accordion.Item className={classes.item} value="credit-card">
                 <Accordion.Control>
                   Are Jasha & Knit Wire the same company?
                 </Accordion.Control>
-                <Accordion.Panel className='text-[#808080]'>{placeholder}</Accordion.Panel>
+                <Accordion.Panel className='text-[#808080]'>{fa4}</Accordion.Panel>
               </Accordion.Item>
             </Accordion>
           </Grid.Col>
