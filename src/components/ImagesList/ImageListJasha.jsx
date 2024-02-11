@@ -6,7 +6,7 @@ import { jashaGal } from '../../constants';
 
 const ImageListJasha = () => {
   return (
-    <Box sx={{ overflowY: 'scroll' }} className="mt-20 mb-10 h-450 md:h-[800px] w-full">
+    <Box sx={{ overflowY: 'scroll' }} className="mt-20 mb-10 h-450 md:h-full w-full">
     <ImageList variant="masonry" cols={3} gap={8}>
         {jashaGal.map((item) => (
         <ImageListItem key={item.img}>

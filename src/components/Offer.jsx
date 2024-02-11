@@ -5,6 +5,7 @@ import { textVariant, staggerContainer } from '../utils/motion'
 import { styles } from '../styles'
 import { Faq } from './FAQ/faq'
 import ImageListJasha from './ImagesList/ImageListJasha'
+import BioBanner from './Banner/BioBanner'
 
 const Offer = () => {
   return (
@@ -27,9 +28,14 @@ const Offer = () => {
 
         <FeaturesAsymmetrical />
 
+        <Faq />
+
         <ImageListJasha />
 
-        <Faq />
+        <span id='bio'>
+            &nbsp;  
+        </span>
+        <BioBanner />
         </motion.section>
     </>
   )
