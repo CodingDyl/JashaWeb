@@ -3,10 +3,9 @@ import Lottie from 'lottie-react';
 import animationData from '../../assets/bioFuelAni.json'
 import classes from './BioBanner.module.css';
 import { IconDownload } from '@tabler/icons-react';
-import { bdfPDf } from '../../assets';
 
 function downloadPDF() {
-    const pdfUrl = '../../assets/bdf.pdf';
+    const pdfUrl = '/bdf.pdf';
 
     const a = document.createElement('a');
     a.href = pdfUrl;
