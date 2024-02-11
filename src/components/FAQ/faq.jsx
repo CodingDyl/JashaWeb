@@ -9,7 +9,7 @@ const fa2 = "Our services encompass a wide range of offerings, including precisi
 
 const fa3 = 'We currently do not have a review system. Should you require any assistance or want to leave a review please contact us directly and we can assist you.'
 
-const fa4 = 'Yes! Jasha, Knitwire and Bio Dynamic Fuel can all be found in one place to solve any problem you may have. Contact US today for any service you may aquire from these companies.'
+const fa4 = 'Yes! Jasha, Knitwire and Bio Dynamic Fuel can all be found in one place to solve any problem you may have. Contact Us today for any service you may aquire from these companies.'
 
 export function Faq() {
   return (

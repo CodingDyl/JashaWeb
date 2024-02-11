@@ -1,57 +1,95 @@
-import { TextInput, Textarea, SimpleGrid, Group, Title, Button, Text } from '@mantine/core';
-import { useForm } from '@mantine/form';
+import { TextInput, Textarea, SimpleGrid, Group, Button } from '@mantine/core';
 import { motion } from 'framer-motion';
+import { useForm } from '@mantine/form';
 import { textVariant, staggerContainer } from '../utils/motion';
 import { styles } from '../styles';
 import { contactPeople } from '../constants';
-import { IconPhoneCall, IconAt } from '@tabler/icons-react';
+import { Resend } from 'resend';
+import { useRef, useState } from 'react';
+import emailjs from "@emailjs/browser";
+import EmployeeCard from './EmployeeCard';
+import.meta.env.JASHA_API_KEY
 
 export function Contact() {
-  const EmployeeCard = ({ name, cell, email, position }) => (
-    <Group wrap="nowrap" className='bg-black/75 mt-10 border-solid border-white-100 w-full border-2 p-2 lg:p-4 rounded-xl'>
-    {/* <Avatar
-      src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png"
-      size={94}
-      radius="md"
-    /> */}
-    <div>
-      <Text fz="xs" tt="uppercase" fw={700} c="dimmed">
-        {position}
-      </Text>
+  //resend config
+  const resend = new Resend(`${import.meta.env.JASHA_API_KEY}`);
 
-      <Text fz="md" fw={500} truncate>
-        {name}
-      </Text>
+  const formRef = useRef();
 
-      <Group wrap="nowrap" gap={5} mt={3}>
-        <IconAt stroke={1.5} size="1rem" />
-        <Text fz="xs" c="dimmed" truncate>
-          {email}
-        </Text>
-      </Group>
 
-      <Group wrap="nowrap" gap={10} mt={5}>
-        <IconPhoneCall stroke={1.5} size="1rem" />
-        <Text fz="xs" c="dimmed">
-          {cell}
-        </Text>
-      </Group>
-    </div>
-  </Group>
-)
-  const form = useForm({
-    initialValues: {
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    },
-    validate: {
-      name: (value) => value.trim().length < 2,
-      email: (value) => !/^\S+@\S+$/.test(value),
-      subject: (value) => value.trim().length === 0,
-    },
+  const validate = {
+    name: (value) => value.trim().length < 2,
+    email: (value) => !/^\S+@\S+$/.test(value),
+    subject: (value) => value.trim().length === 0,
+  };
+
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
+
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      validate.name(form.name) ||
+      validate.email(form.email) ||
+      validate.subject(form.subject)
+    ) {
+      // If any validation fails, display error message and prevent email sending
+      setLoading(false);
+      alert("Please fill out all the required fields correctly.");
+      return;
+    }
+
+    setLoading(true);
+
+    emailjs.send(
+        'service_8ug5t08',
+        'template_89r4q4d',
+        {
+          from_name: form.name,
+          to_name: "Jasha Consulting",
+          from_email: form.email,
+          to_email: "2610dylan@gmail.com",
+          message: form.message,
+        },
+        'i_IFgvR2F8kYMIPmq'
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+
+          setForm({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          console.error(error);
+
+          alert("Ahh, something went wrong. Please try again.");
+        }
+      );
+  };
 
   return (
     <>
@@ -74,47 +112,51 @@ export function Contact() {
                 <p className={styles.sectionSubText}>Get In Touch</p>
                 <h2 className={styles.sectionHeadTextContact}>Contact Us.</h2>
             </motion.div>
-    <form onSubmit={form.onSubmit(() => {})}>
+    <form ref={formRef} onSubmit={handleSubmit}>
       <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
         <TextInput
           label="Name"
           placeholder="Your name"
           name="name"
+          value={form.name}
+          onChange={handleChange}
           variant="filled"
-          {...form.getInputProps('name')}
         />
         <TextInput
           label="Email"
           placeholder="Your email"
           name="email"
+          onChange={handleChange}
+          value={form.email}
           variant="filled"
-          {...form.getInputProps('email')}
         />
       </SimpleGrid>
 
       <TextInput
         label="Subject"
         placeholder="Subject"
+        value={form.subject}
+        onChange={handleChange}
         mt="md"
         name="subject"
         variant="filled"
-        {...form.getInputProps('subject')}
       />
       <Textarea
         mt="md"
         label="Message"
         placeholder="Your message"
+        value={form.message}
+        onChange={handleChange}
         maxRows={10}
         minRows={5}
         autosize
         name="message"
         variant="filled"
-        {...form.getInputProps('message')}
       />
 
       <Group justify="center" mt="xl">
         <Button type="submit" size="md" className='bg-black !important'>
-          Send message
+          {loading ? "Sending..." : "Send"}
         </Button>
       </Group>
     </form>
