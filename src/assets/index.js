@@ -25,4 +25,6 @@ import Image10 from './Image10.jpg'
 import Image11 from './Image11.jpg'
 import Image12 from './Image12.jpg'
 
-export {logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol, knitwire, Image1, Image3, Image4, Image5, Image7, Image8, Image9, Image10, Image11, Image12, Image2, Image6}
+import bdfPDf from './bdf.pdf'
+
+export {bdfPDf, logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol, knitwire, Image1, Image3, Image4, Image5, Image7, Image8, Image9, Image10, Image11, Image12, Image2, Image6}

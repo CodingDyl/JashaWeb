@@ -8,10 +8,20 @@ import { motion } from 'framer-motion';
 import Customers from './Slider/Customers';
 import { Button } from '@mantine/core';
 import { IconDownload } from '@tabler/icons-react';
+import KnitModal from './Modals/KnitModal';
 
 const HomePage = () => {
     const [active, setActive] = useState("");
     const [toggle, setToggle] = useState(false);
+    const [open, setOpen] = useState(false);
+
+    const handleModalOpen = () => {
+      setOpen(true);
+    }
+
+    const handleModalClose = () => {
+      setOpen(false);
+    }
   return (
     <>
     <section className="bg-pattern-sm md:bg-bg-pattern bg-cover bg-no-repeat bg-center bg-blend-overlay md:bg-fixed md:bg-black/75">
@@ -67,7 +77,7 @@ const HomePage = () => {
                 <div className='flex flex-col w-full gap-4 items-center'>
                     <div className='flex flex-col md:flex-row gap-4 md:gap-2'>
                       <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]'><a href="#offer">JSC Services</a></Button>
-                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]'><img src={knitwire} alt='knitwire logo' className='bg-cover bg-no-repeat' /></Button>
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]' onClick={handleModalOpen}><img src={knitwire} alt='knitwire logo' className='bg-cover bg-no-repeat' /></Button>
                       <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[320px]'><a href="#bio">Bio Dynamic Fuel</a></Button>
                     </div>
                 </div>
@@ -84,6 +94,7 @@ const HomePage = () => {
         </a>
       </div>
     </section>
+    <KnitModal opened={open} close={() => setOpen(false)} />
     </>
   )
 }

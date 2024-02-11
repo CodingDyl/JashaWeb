@@ -3,10 +3,10 @@ import { logo_bg } from '../../assets';
 import classes from './Footer.module.css';
 
 const links = [
-  { link: 'contact', label: 'Contact' },
-  { link: '#', label: 'Privacy' },
+  { link: '#contact', label: 'Contact' },
+  { link: '#faq', label: 'Privacy' },
   { link: '#about', label: 'About' },
-  { link: '#', label: 'Learn More' },
+  { link: '#services', label: 'Learn More' },
 ];
 
 export function Footer() {

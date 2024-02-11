@@ -2,6 +2,21 @@ import { Text, Title, TextInput, Button, Image } from '@mantine/core';
 import Lottie from 'lottie-react';
 import animationData from '../../assets/bioFuelAni.json'
 import classes from './BioBanner.module.css';
+import { IconDownload } from '@tabler/icons-react';
+import { bdfPDf } from '../../assets';
+
+function downloadPDF() {
+    const pdfUrl = '../../assets/bdf.pdf';
+
+    const a = document.createElement('a');
+    a.href = pdfUrl;
+    a.download = 'bioFuelDocument.pdf';
+
+    document.body.appendChild(a);
+    a.click();
+
+    document.body.removeChild(a);
+}
 
 const BioBanner = () => {
   return (
@@ -16,7 +31,7 @@ const BioBanner = () => {
         </Text>
 
         
-          <Button className="bg-black/40 hover:bg-black/20 border-1 border-white-100 mt-4 w-full">Learn More</Button>
+          <Button onClick={downloadPDF} className="bg-black/40 hover:bg-black/20 border-1 border-white-100 mt-4 w-full" rightSection={<IconDownload size={14} />}>Learn More</Button>
         </div>
       <Lottie animationData={animationData} />
     </div>
