@@ -51,31 +51,31 @@ export default class Customers extends Component {
             <div className="mainContainer mx-10 px-10">
                 <Slider {...settings}>
                     <div className="container">
-                        <img src={anglo}  alt="mpact" className="md:w-[220px] sm:-[150px]"/>
+                        <img src={anglo}  alt="mpact" className="md:w-[220px] w-[150px]"/>
                     </div>
                     <div className="container">
-                        <img src={air_products} alt="Deloitte" className="md:w-[220px] sm:-[150px]"/>
+                        <img src={air_products} alt="Deloitte" className="md:w-[220px] w-[150px]"/>
                     </div>
                     <div className="container">
-                        <img src={aeci} alt="rbh" className="md:w-[220px] sm:-[150px]"/>
+                        <img src={aeci} alt="rbh" className="md:w-[220px] w-[150px]"/>
                     </div>
                     <div className="container">
-                        <img src={mondi} alt="pwc" className="md:w-[220px] sm:-[150px]"/>
+                        <img src={mondi} alt="pwc" className="md:w-[220px] w-[150px]"/>
                     </div>
                     <div className="container">
-                        <img src={natref} alt="spar" className="md:w-[220px] sm:-[150px]"/>
+                        <img src={natref} alt="spar" className="md:w-[220px] w-[150px]"/>
                     </div>
                     <div className="container">
-                        <img src={omnia} alt="ISS" className="md:w-[220px] sm:-[150px]"/>
+                        <img src={omnia} alt="ISS" className="md:w-[220px] w-[150px]"/>
                     </div>
                     <div className="container">
-                        <img src={safripol} alt="ISS" className="md:w-[220px] sm:-[150px]"/>
+                        <img src={safripol} alt="ISS" className="md:w-[220px] w-[150px]"/>
                     </div>
                     <div className="container">
-                        <img src={sappi} alt="ISS" className="md:w-[220px] sm:-[150px]"/>
+                        <img src={sappi} alt="ISS" className="md:w-[220px] w-[150px]"/>
                     </div>
                     <div className="container">
-                        <img src={sasol} alt="ISS" className="md:w-[220px] sm:-[150px]"/>
+                        <img src={sasol} alt="ISS" className="md:w-[220px] w-[150px]"/>
                     </div>
                 </Slider>
             </div>
