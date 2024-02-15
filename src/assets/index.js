@@ -25,4 +25,15 @@ import Image10 from './Image10.jpg'
 import Image11 from './Image11.jpg'
 import Image12 from './Image12.jpg'
 
-export {logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol, knitwire, Image1, Image3, Image4, Image5, Image7, Image8, Image9, Image10, Image11, Image12, Image2, Image6}
+import knit01 from './knit-01.jpg'
+import knit02 from './knit-02.jpg'
+import knit03 from './knit-03.jpg'
+import knit04 from './knit-04.jpg'
+import knit05 from './knit-05.jpg'
+import knit06 from './knit-06.jpg'
+import knit07 from './knit-07.jpg'
+import knit08 from './knit-08.jpg'
+import knit09 from './knit-09.jpg'
+import knit10 from './knit-10.jpg'
+
+export {logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol, knitwire, Image1, Image3, Image4, Image5, Image7, Image8, Image9, Image10, Image11, Image12, Image2, Image6, knit01, knit02, knit03, knit04, knit05, knit06, knit07, knit08, knit09, knit10}

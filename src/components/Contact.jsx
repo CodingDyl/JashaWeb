@@ -11,8 +11,6 @@ import EmployeeCard from './EmployeeCard';
 import.meta.env.JASHA_API_KEY
 
 export function Contact() {
-  //resend config
-  const resend = new Resend(`${import.meta.env.JASHA_API_KEY}`);
 
   const formRef = useRef();
 
@@ -65,7 +63,7 @@ export function Contact() {
           from_name: form.name,
           to_name: "Jasha Consulting",
           from_email: form.email,
-          to_email: "2610dylan@gmail.com",
+          to_email: "shaun@jasha.co.za",
           message: form.message,
         },
         'i_IFgvR2F8kYMIPmq'
@@ -94,8 +92,8 @@ export function Contact() {
   return (
     <>
     <span id='contact'>
-            &nbsp;  
-        </span>
+        &nbsp;  
+    </span>
     <motion.section
         variants={staggerContainer()}
         initial='hidden'
@@ -156,7 +154,7 @@ export function Contact() {
 
       <Group justify="center" mt="xl">
         <Button type="submit" size="md" className='bg-black !important'>
-          {loading ? "Sending..." : "Send"}
+          { loading ? "Sending..." : "Send" }
         </Button>
       </Group>
     </form>

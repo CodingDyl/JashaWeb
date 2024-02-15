@@ -1,4 +1,4 @@
-import { Image1, Image3, Image10, Image4, Image5, Image7, Image8, Image9, Image11, Image12, Image2, Image6 } from "../assets";
+import { Image1, Image3, Image10, Image4, Image5, Image7, Image8, Image9, Image11, Image12, Image2, Image6, knit01, knit02, knit03, knit04, knit05, knit06, knit07, knit08, knit09, knit10 } from "../assets";
 
 const navLinks = [
     {
@@ -17,15 +17,15 @@ const navLinks = [
 
 const contactPeople = [
     {
-      name: 'Billy Butcher',
-      email: 'jsc@email.co.za',
-      cell: '079 796 3113',
+      name: 'Shaun Darymple',
+      email: 'shaun@jasha.co.za',
+      cell: '083 788 2730',
       position: 'Jasha Consultant'
     },
     {
-      name: 'Donald Swab',
-      email: 'random@email.com',
-      cell: '083 548 4541',
+      name: 'Warren Dalrymple',
+      email: 'warren@knitwire.co.za',
+      cell: '065 881 7513',
       position: 'Knit Wire Consaltant'
     },
     {
@@ -147,4 +147,47 @@ const jashaGal = [
     },
   ];
 
-export {navLinks, footerLinks, contactPeople, jashaGal};
+const knitGal = [
+    {
+      img: knit01,
+      title: 'Knit',
+    },
+    {
+      img: knit02,
+      title: 'Knit',
+    },
+    {
+      img: knit03,
+      title: 'Knit',
+    },
+    {
+      img: knit04,
+      title: 'Knit',
+    },
+    {
+      img: knit05,
+      title: 'Knit',
+    },
+    {
+      img: knit06,
+      title: 'Knit',
+    },
+    {
+      img: knit07,
+      title: 'Knit',
+    },
+    {
+      img: knit08,
+      title: 'Knit',
+    },
+    {
+      img: knit09,
+      title: 'Knit',
+    },
+    {
+      img: knit10,
+      title: 'Knit',
+    },
+  ];
+
+export {navLinks, footerLinks, contactPeople, jashaGal, knitGal};

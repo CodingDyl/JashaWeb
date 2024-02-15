@@ -8,6 +8,7 @@ import { IconCircleCheckFilled } from '@tabler/icons-react';
 import { Container, SimpleGrid, rem, Text } from '@mantine/core';
 import { styles } from '../../styles';
 import classes from '../FeaturesSection/FeaturesAsymmetrical.module.css'
+import ImageListKnitwire from '../ImagesList/ImageListKnitwire';
 
 function Feature({ icon: Icon, title, description, className, ...others }) {
     return (
@@ -91,7 +92,7 @@ const KnitModal = ({opened, close}) => {
             <img src={knitwire} alt='knitwire logo' className='px-2 w-full h-full bg-no-repeat bg-center' />
         </div>
 
-        <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-10">
+        <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-10 text-center mx-auto">
             <h2 className={styles.modalHeadText}>Our Services.</h2>
         </motion.div>
 
@@ -100,6 +101,9 @@ const KnitModal = ({opened, close}) => {
                 {items}
             </SimpleGrid>
         </Container>
+
+        <ImageListKnitwire />
+
         <div className='w-[50%] flex justify-center items-center align-middle mx-auto mt-5 md:mt-10'>
             <Button variant='filled' size='lg' className='bg-[#00563B] hover:bg-[#00563B]/30 border-2 border-black text-md md:text-2xl max-w-[220px] min-w-full text-white m-auto' onClick={close}><a href="#contact">Contact Us</a></Button>
         </div>
