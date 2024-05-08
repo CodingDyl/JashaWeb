@@ -1,4 +1,4 @@
-import { Image1, Image3, Image10, Image4, Image5, Image7, Image8, Image9, Image11, Image12, Image2, Image6, knit01, knit02, knit03, knit04, knit05, knit06, knit07, knit08, knit09, knit10 } from "../assets";
+import { Image1, Image3, Image10, Image4, Image5, Image7, Image8, Image9, Image11, Image12, Image2, Image6, knit01, knit02, knit03, knit04, knit05, knit06, knit07, knit08, knit09, knit10, bio_1, bio_2, bio_3, bio_4 } from "../assets";
 
 const navLinks = [
     {
@@ -17,7 +17,7 @@ const navLinks = [
 
 const contactPeople = [
     {
-      name: 'Shaun Darymple',
+      name: 'Shaun Dalrymple',
       email: 'shaun@jasha.co.za',
       cell: '083 788 2730',
       position: 'Jasha Consultant'
@@ -29,9 +29,9 @@ const contactPeople = [
       position: 'Knit Wire Consaltant'
     },
     {
-      name: 'John Doe',
-      email: 'email@email.com',
-      cell: '082 325 4053',
+      name: 'Shaun Dalrymple',
+      email: 'shaun@jasha.co.za',
+      cell: '083 788 2730',
       position: 'Bio Fuel Consultant'
     },
   ];
@@ -96,6 +96,25 @@ const footerLinks = [
     }
 ];
 
+const bioGal = [
+  {
+    img: bio_1,
+    title: 'BIO'
+  },
+  {
+    img: bio_2,
+    title: 'BIO'
+  },
+  {
+    img: bio_3,
+    title: 'BIO'
+  },
+  {
+    img: bio_4,
+    title: 'BIO'
+  },
+];
+
 const jashaGal = [
     {
       img: Image1,
@@ -122,10 +141,6 @@ const jashaGal = [
       title: 'JSC',
     },
     {
-      img: Image7,
-      title: 'JSC',
-    },
-    {
       img: Image8,
       title: 'JSC',
     },
@@ -139,10 +154,6 @@ const jashaGal = [
     },
     {
       img: Image11,
-      title: 'JSC',
-    },
-    {
-      img: Image12,
       title: 'JSC',
     },
   ];
@@ -190,4 +201,4 @@ const knitGal = [
     },
   ];
 
-export {navLinks, footerLinks, contactPeople, jashaGal, knitGal};
+export {navLinks, footerLinks, contactPeople, jashaGal, knitGal, bioGal};

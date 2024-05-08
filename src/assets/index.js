@@ -36,4 +36,11 @@ import knit08 from './knit-08.jpg'
 import knit09 from './knit-09.jpg'
 import knit10 from './knit-10.jpg'
 
-export {logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol, knitwire, Image1, Image3, Image4, Image5, Image7, Image8, Image9, Image10, Image11, Image12, Image2, Image6, knit01, knit02, knit03, knit04, knit05, knit06, knit07, knit08, knit09, knit10}
+
+import bio_logo from './bio_logo_no_bg.png'
+import bio_1 from './bio/bio_1.png'
+import bio_2 from './bio/bio_2.png'
+import bio_3 from './bio/bio_3.png'
+import bio_4 from './bio/bio_4.png'
+
+export {bio_logo, bio_1, bio_2, bio_3, bio_4, logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol, knitwire, Image1, Image3, Image4, Image5, Image7, Image8, Image9, Image10, Image11, Image12, Image2, Image6, knit01, knit02, knit03, knit04, knit05, knit06, knit07, knit08, knit09, knit10}

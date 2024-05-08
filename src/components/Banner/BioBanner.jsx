@@ -3,22 +3,11 @@ import Lottie from 'lottie-react';
 import animationData from '../../assets/bioFuelAni.json'
 import classes from './BioBanner.module.css';
 import { IconDownload } from '@tabler/icons-react';
-
-function downloadPDF() {
-    const pdfUrl = '/bdf.pdf';
-
-    const a = document.createElement('a');
-    a.href = pdfUrl;
-    a.download = 'bioFuelDocument.pdf';
-
-    document.body.appendChild(a);
-    a.click();
-
-    document.body.removeChild(a);
-}
+import BioModal from '../Modals/BioModal';
 
 const BioBanner = () => {
   return (
+    <>
     <div className={classes.wrapper}>
       <div className={classes.body}>
         <Title fw={900} className={classes.title}>Want to help our Planet...</Title>
@@ -30,10 +19,11 @@ const BioBanner = () => {
         </Text>
 
         
-          <Button onClick={downloadPDF} className="bg-black/40 hover:bg-black/20 border-1 border-white-100 mt-4 w-full" rightSection={<IconDownload size={14} />}>Learn More</Button>
+          <a href='/'><Button className="bg-black/40 hover:bg-black/20 border-1 border-white-100 mt-4 w-full">Learn More</Button></a>
         </div>
       <Lottie animationData={animationData} />
     </div>
+    </>
   )
 }
 

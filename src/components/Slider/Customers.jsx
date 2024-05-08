@@ -16,7 +16,7 @@ export default class Customers extends Component {
             slidesToScroll: 3,
             autoplay: true,
             speed: 1000,
-            autoplaySpeed: 2000,
+            autoplaySpeed: 3000,
             cssEase: "linear",
             arrows: true,
             responsive: [

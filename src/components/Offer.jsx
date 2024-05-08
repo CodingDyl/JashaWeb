@@ -7,6 +7,7 @@ import { Faq } from './FAQ/faq'
 import ImageListJasha from './ImagesList/ImageListJasha'
 import BioBanner from './Banner/BioBanner'
 
+
 const Offer = () => {
   return (
     <>
@@ -32,9 +33,6 @@ const Offer = () => {
 
         <ImageListJasha />
 
-        <span id='bio'>
-            &nbsp;  
-        </span>
         <BioBanner />
         </motion.section>
     </>
