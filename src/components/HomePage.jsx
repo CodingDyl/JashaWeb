@@ -9,18 +9,20 @@ import Customers from './Slider/Customers';
 import { Button } from '@mantine/core';
 import { IconDownload } from '@tabler/icons-react';
 import KnitModal from './Modals/KnitModal';
+import BioModal from './Modals/BioModal';
 
 const HomePage = () => {
     const [active, setActive] = useState("");
     const [toggle, setToggle] = useState(false);
     const [open, setOpen] = useState(false);
+    const [openBio, setOpenBio] = useState(false);
 
     const handleModalOpen = () => {
       setOpen(true);
     }
 
-    const handleModalClose = () => {
-      setOpen(false);
+    const handleModalOpenBio = () => {
+      setOpenBio(true);
     }
   return (
     <>
@@ -78,7 +80,7 @@ const HomePage = () => {
                     <div className='flex flex-col md:flex-row gap-4 md:gap-2'>
                       <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]'><a href="#offer">JSC Services</a></Button>
                       <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]' onClick={handleModalOpen}><img src={knitwire} alt='knitwire logo' className='bg-cover bg-no-repeat' /></Button>
-                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[320px]'><a href="#bio">Bio Dynamic Fuel</a></Button>
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[320px]' onClick={handleModalOpenBio}>Bio Dynamic Fuel</Button>
                     </div>
                 </div>
         </div>
@@ -95,6 +97,7 @@ const HomePage = () => {
       </div>
     </section>
     <KnitModal opened={open} close={() => setOpen(false)} />
+    <BioModal opened={openBio} close={() => setOpenBio(false)} />
     </>
   )
 }
