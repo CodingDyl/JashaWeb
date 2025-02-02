@@ -2,14 +2,6 @@ import { Image1, Image3, Image10, Image4, Image5, Image7, Image8, Image9, Image1
 
 const navLinks = [
     {
-        id: "#about",
-        title: "About Us"
-    },
-    {
-        id: "#offer",
-        title: "What we offer"
-    },
-    {
         id: "#contact",
         title: "Contact Us"
     },

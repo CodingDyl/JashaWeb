@@ -26,12 +26,16 @@ const BioModal = ({opened, close}) => {
             body: { backgroundColor: 'black', color: 'white', padding: '20px'}
         }}
     >
-        <div className="w-[100%] h-[20%]">
-            <img src={bio_logo} alt='knitwire logo' className='px-2 w-full h-full bg-no-repeat bg-center' />
+        <div className="w-[100%] h-[15%] flex items-center justify-center py-4">
+            <img 
+                src={bio_logo} 
+                alt='bio logo' 
+                className='px-4 w-auto h-full object-contain max-h-[80px]' 
+            />
         </div>
 
-        <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-10 text-center mx-auto">
-            <h2 className={styles.modalHeadText}>What is BioFuel?</h2>
+        <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-6 text-center mx-auto">
+            <h2 className={`${styles.modalHeadText} text-2xl md:text-3xl`}>What is BioFuel?</h2>
         </motion.div>
 
         <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 mb-4 text-secondary m-auto text-center text-[17px] max-w-3xl leading-[30px]">
@@ -41,8 +45,8 @@ const BioModal = ({opened, close}) => {
           </motion.p>
           
 
-          <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-10 text-center mx-auto">
-            <h2 className={styles.modalHeadText}>Going Green?</h2>
+          <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-6 text-center mx-auto">
+            <h2 className={`${styles.modalHeadText} text-2xl md:text-3xl`}>Going Green?</h2>
         </motion.div>
 
         <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 mb-4 text-secondary m-auto text-center text-[17px] max-w-3xl leading-[30px]">

@@ -7,15 +7,15 @@ import { knitwire, logo_bg } from '../assets';
 import { motion } from 'framer-motion';
 import Customers from './Slider/Customers';
 import { Button } from '@mantine/core';
-import { IconDownload } from '@tabler/icons-react';
 import KnitModal from './Modals/KnitModal';
 import BioModal from './Modals/BioModal';
-
+import JashaModal from './Modals/JashaModal';
 const HomePage = () => {
     const [active, setActive] = useState("");
     const [toggle, setToggle] = useState(false);
     const [open, setOpen] = useState(false);
     const [openBio, setOpenBio] = useState(false);
+    const [openJasha, setOpenJasha] = useState(false);
 
     const handleModalOpen = () => {
       setOpen(true);
@@ -24,9 +24,15 @@ const HomePage = () => {
     const handleModalOpenBio = () => {
       setOpenBio(true);
     }
+
+    const handleModalOpenJasha = () => {
+      setOpenJasha(true);
+    }
+
   return (
     <>
     <section className="bg-pattern-sm md:bg-bg-pattern bg-cover bg-no-repeat bg-center bg-blend-overlay md:bg-fixed md:bg-black/60">
+
 
         {/* Nav Section */}
       <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-black/40 md:bg-transparent`}>
@@ -78,7 +84,7 @@ const HomePage = () => {
                 <p className="font-light text-xl md:text-4xl text-white-100">Your trusted partner since 2005</p>
                 <div className='flex flex-col w-full gap-4 items-center'>
                     <div className='flex flex-col md:flex-row gap-4 md:gap-2'>
-                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]'><a href="#offer">JSC Services</a></Button>
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]' onClick={handleModalOpenJasha}>JSC Services</Button>
                       <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]' onClick={handleModalOpen}><img src={knitwire} alt='knitwire logo' className='bg-cover bg-no-repeat' /></Button>
                       <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[320px]' onClick={handleModalOpenBio}>Bio Dynamic Fuel</Button>
                     </div>
@@ -97,9 +103,11 @@ const HomePage = () => {
       </div>
     </section>
     <KnitModal opened={open} close={() => setOpen(false)} />
-    <BioModal opened={openBio} close={() => setOpenBio(false)} />
+    <BioModal opened={openBio} close={() => setOpenBio(false)} /> 
+    <JashaModal opened={openJasha} close={() => setOpenJasha(false)} />
     </>
   )
 }
+
 
 export default HomePage

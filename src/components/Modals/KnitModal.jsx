@@ -9,6 +9,7 @@ import { Container, SimpleGrid, rem, Text } from '@mantine/core';
 import { styles } from '../../styles';
 import classes from '../FeaturesSection/FeaturesAsymmetrical.module.css'
 import ImageListKnitwire from '../ImagesList/ImageListKnitwire';
+import { knitwire_products_pdf } from '../../../public/index';
 
 function Feature({ icon: Icon, title, description, className, ...others }) {
     return (
@@ -88,12 +89,16 @@ const KnitModal = ({opened, close}) => {
             body: { backgroundColor: 'black', color: 'white', padding: '20px'}
         }}
     >
-        <div className="w-[100%] h-[20%]">
-            <img src={knitwire} alt='knitwire logo' className='px-2 w-full h-full bg-no-repeat bg-center' />
+        <div className="w-[100%] h-[15%] flex items-center justify-center py-4">
+            <img 
+                src={knitwire} 
+                alt='knitwire logo' 
+                className='px-4 w-auto h-full object-contain max-h-[80px]' 
+            />
         </div>
 
-        <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-10 text-center mx-auto">
-            <h2 className={styles.modalHeadText}>Our Services.</h2>
+        <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-6 text-center mx-auto">
+            <h2 className={`${styles.modalHeadText} text-2xl md:text-3xl`}>Our Services</h2>
         </motion.div>
 
         <Container mt={30} mb={30} size="lg">
@@ -101,6 +106,22 @@ const KnitModal = ({opened, close}) => {
                 {items}
             </SimpleGrid>
         </Container>
+
+        <div className='flex flex-col items-center justify-center gap-4 mt-8'>
+          <Text className='text-lg md:text-xl text-center'>
+            Download our product catalog to explore our complete range of solutions
+          </Text>
+          <Button 
+            component="a" 
+            href={knitwire_products_pdf}
+            download
+            variant='filled' 
+            size='lg' 
+            className='bg-[#00563B] hover:bg-[#00563B]/30 border-2 border-black text-md md:text-xl max-w-[280px] text-white'
+          >
+            Download Catalog
+          </Button>
+        </div>
 
         <ImageListKnitwire />
 
