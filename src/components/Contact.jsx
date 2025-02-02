@@ -101,70 +101,118 @@ export function Contact() {
         viewport={{once: true, amount: 0.25}}
         className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
     >
+        <div className='relative bg-tertiary/20 rounded-2xl p-12 backdrop-blur-sm shadow-xl'>
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-black/10 rounded-full blur-2xl" />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-black/5 rounded-full blur-2xl" />
 
-        
-
-        <div className='bg-tertiary/20 rounded-lg p-10'>
-
-        <motion.div variants={textVariant}>
-                <p className={styles.sectionSubText}>Get In Touch</p>
-                <h2 className={styles.sectionHeadTextContact}>Contact Us.</h2>
+            <motion.div variants={textVariant} className="relative">
+                <p className={`${styles.sectionSubText} inline-block pb-2 border-b-2 border-black/20`}>Get In Touch</p>
+                <h2 className={`${styles.sectionHeadTextContact} mb-8`}>Contact Us.</h2>
             </motion.div>
-    <form ref={formRef} onSubmit={handleSubmit}>
-      <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl">
-        <TextInput
-          label="Name"
-          placeholder="Your name"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          variant="filled"
-        />
-        <TextInput
-          label="Email"
-          placeholder="Your email"
-          name="email"
-          onChange={handleChange}
-          value={form.email}
-          variant="filled"
-        />
-      </SimpleGrid>
 
-      <TextInput
-        label="Subject"
-        placeholder="Subject"
-        value={form.subject}
-        onChange={handleChange}
-        mt="md"
-        name="subject"
-        variant="filled"
-      />
-      <Textarea
-        mt="md"
-        label="Message"
-        placeholder="Your message"
-        value={form.message}
-        onChange={handleChange}
-        maxRows={10}
-        minRows={5}
-        autosize
-        name="message"
-        variant="filled"
-      />
+            <form ref={formRef} onSubmit={handleSubmit} className="relative z-10">
+                <SimpleGrid cols={{ base: 1, sm: 2 }} mt="xl" className="gap-6">
+                    <TextInput
+                        label="Name"
+                        placeholder="Your name"
+                        name="name"
+                        value={form.name}
+                        onChange={handleChange}
+                        variant="filled"
+                        classNames={{
+                            input: 'bg-white/50 border-0 transition-all duration-300 hover:bg-white/70 focus:bg-white/90',
+                            label: 'font-medium mb-2'
+                        }}
+                    />
+                    <TextInput
+                        label="Email"
+                        placeholder="Your email"
+                        name="email"
+                        onChange={handleChange}
+                        value={form.email}
+                        variant="filled"
+                        classNames={{
+                            input: 'bg-white/50 border-0 transition-all duration-300 hover:bg-white/70 focus:bg-white/90',
+                            label: 'font-medium mb-2'
+                        }}
+                    />
+                </SimpleGrid>
 
-      <Group justify="center" mt="xl">
-        <Button type="submit" size="md" className='bg-black !important'>
-          { loading ? "Sending..." : "Send" }
-        </Button>
-      </Group>
-    </form>
-    </div>
+                <TextInput
+                    label="Subject"
+                    placeholder="Subject"
+                    value={form.subject}
+                    onChange={handleChange}
+                    mt="md"
+                    name="subject"
+                    variant="filled"
+                    classNames={{
+                        input: 'bg-white/50 border-0 transition-all duration-300 hover:bg-white/70 focus:bg-white/90',
+                        label: 'font-medium mb-2'
+                    }}
+                />
+                <Textarea
+                    mt="md"
+                    label="Message"
+                    placeholder="Your message"
+                    value={form.message}
+                    onChange={handleChange}
+                    maxRows={10}
+                    minRows={5}
+                    autosize
+                    name="message"
+                    variant="filled"
+                    classNames={{
+                        input: 'bg-white/50 border-0 transition-all duration-300 hover:bg-white/70 focus:bg-white/90',
+                        label: 'font-medium mb-2'
+                    }}
+                />
 
-    <div className='flex flex-col gap-4 md:flex-row w-[100%] mb-10 justify-center md:justify-between items-center'>
-        {contactPeople.map((contact) => (
-              <EmployeeCard key={contact.name} {...contact}/>
-        ))}
-    </div>
+                <Group justify="center" mt="xl">
+                    <Button 
+                        type="submit" 
+                        size="md" 
+                        className='relative overflow-hidden bg-black hover:bg-black/90 transition-all duration-300 px-12 py-2 group
+                        before:content-[""] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2
+                        before:w-0 before:h-0 before:bg-white/10 before:rounded-full before:transition-all before:duration-500
+                        hover:before:w-[300px] hover:before:h-[300px] active:scale-95'
+                    >
+                        <span className="relative inline-flex items-center gap-2">
+                            {loading ? (
+                                <>
+                                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                    Sending...
+                                </>
+                            ) : (
+                                <>
+                                    Send Message
+                                    <svg 
+                                        className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" 
+                                        fill="none" 
+                                        stroke="currentColor" 
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path 
+                                            strokeLinecap="round" 
+                                            strokeLinejoin="round" 
+                                            strokeWidth={2} 
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3" 
+                                        />
+                                    </svg>
+                                </>
+                            )}
+                        </span>
+                    </Button>
+                </Group>
+            </form>
+        </div>
+
+        <div className='flex flex-col gap-6 md:flex-row w-[100%] mt-16 mb-10 justify-center md:justify-between items-center'>
+            {contactPeople.map((contact) => (
+                <EmployeeCard key={contact.name} {...contact}/>
+            ))}
+        </div>
     </motion.section>
     </>
   );
