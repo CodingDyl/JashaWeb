@@ -1,10 +1,13 @@
 import { Text, SimpleGrid, Container, rem } from '@mantine/core';
 import { IconCircleCheckFilled } from '@tabler/icons-react';
 import classes from './FeaturesAsymmetrical.module.css';
+import { useState } from 'react';
+import { useDisclosure } from '@mantine/hooks';
+import FeatureModal from '../Modals/FeatureModal';
 
-function Feature({ icon: Icon, title, description, className, ...others }) {
+function Feature({ icon: Icon, title, description, className, onClick, ...others }) {
   return (
-    <div className={classes.feature} {...others}>
+    <div className={classes.feature} onClick={onClick} style={{ cursor: 'pointer' }} {...others}>
       <div className={classes.overlay} />
 
       <div className={classes.content}>
@@ -26,6 +29,7 @@ const mockdata = [
     title: 'Stainless Steel Fabrication',
     description:
       'Precision stainless steel fabrication service for diverse industrial applications across South Africa',
+    fullDescription: 'Our stainless steel fabrication services deliver premium quality solutions for various industrial needs. We specialize in custom fabrication, welding, and finishing of stainless steel components, ensuring durability and corrosion resistance for your specific requirements.',
   },
   {
     icon: IconCircleCheckFilled,
@@ -54,13 +58,32 @@ const mockdata = [
 ];
 
 export function FeaturesAsymmetrical() {
-  const items = mockdata.map((item) => <Feature {...item} key={item.title} />);
+  const [selectedFeature, setSelectedFeature] = useState(null);
+  const [opened, { open, close }] = useDisclosure(false);
+
+  const handleFeatureClick = (feature) => {
+    setSelectedFeature(feature);
+    open();
+  };
+
+  const items = mockdata.map((item) => (
+    <Feature 
+      {...item} 
+      key={item.title} 
+      onClick={() => handleFeatureClick(item)}
+    />
+  ));
 
   return (
     <Container mt={30} mb={30} size="lg">
       <SimpleGrid cols={{ base: 1, sm: 3 }} spacing={50}>
         {items}
       </SimpleGrid>
+      <FeatureModal 
+        opened={opened} 
+        close={close} 
+        feature={selectedFeature || mockdata[0]} 
+      />
     </Container>
   );
 }
