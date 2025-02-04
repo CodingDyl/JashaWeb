@@ -1,17 +1,29 @@
 .feature {
     position: relative;
-    padding-top: var(--mantine-spacing-xl);
-    padding-left: var(--mantine-spacing-xl);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .feature:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .feature:hover .overlay {
+    opacity: 1;
   }
   
   .overlay {
     position: absolute;
-    height: rem(100px);
-    width: rem(160px);
     top: 0;
     left: 0;
-    background-color: #C0C0C0 !important;
-    z-index: 1;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
   
   .content {
