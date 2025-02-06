@@ -33,7 +33,7 @@ function Feature({ icon: Icon, title, description, className, onClick, ...others
 const mockdata = [
     {
       icon: IconCircleCheckFilled,
-      title: 'Mesh Delisted',
+      title: 'Mesh Demister',
       description:
         'Efficient mesh demister solutions for gas-liquid separation in industrial processes.',
       fullDescription: 'Our mesh demisters provide superior gas-liquid separation efficiency. These solutions are designed for optimal performance in various industrial processes, featuring high-quality materials and expert engineering.',

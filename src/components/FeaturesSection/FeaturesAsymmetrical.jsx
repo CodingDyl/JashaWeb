@@ -37,12 +37,12 @@ const mockdata = [
     description:
       'Custom mild steel fabrication for durable structural and architectural projects.',
   },
-  {
-    icon: IconCircleCheckFilled,
-    title: 'Plastic Fabrication',
-    description:
-      'Specialized plastic fabrication providing versatile solutions for various industrial needs.',
-  },
+  // {
+  //   icon: IconCircleCheckFilled,
+  //   title: 'Plastic Fabrication',
+  //   description:
+  //     'Specialized plastic fabrication providing versatile solutions for various industrial needs.',
+  // },
   {
     icon: IconCircleCheckFilled,
     title: 'Piping',
