@@ -84,9 +84,14 @@ const HomePage = () => {
                 <p className="font-light text-xl md:text-4xl text-white-100">Your trusted partner since 2005</p>
                 <div className='flex flex-col w-full gap-4 items-center'>
                     <div className='flex flex-col md:flex-row gap-4 md:gap-2'>
-                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]' onClick={handleModalOpenJasha}>JSC Services</Button>
-                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[220px]' onClick={handleModalOpen}><img src={knitwire} alt='knitwire logo' className='bg-cover bg-no-repeat' /></Button>
-                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-2 border-black text-md md:text-2xl max-w-[320px]' onClick={handleModalOpenBio}>Bio Dynamic Fuel</Button>
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-1 border-b-secondary hover:border-black text-md md:text-2xl min-w-[300px] p-2' onClick={handleModalOpenJasha}>
+                        <img src={logo_bg} alt='jasha logo' className='w-full h-8 object-contain' />
+                      </Button>
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-1 border-b-secondary hover:border-black text-md md:text-2xl min-w-[300px] p-2' onClick={handleModalOpen}>
+                        <img src={knitwire} alt='knitwire logo' className='w-full h-8 object-contain' />
+                      </Button>
+
+                      <Button variant='filled' size='lg' className='bg-black/75 hover:bg-black/30 border-1 border-b-secondary hover:border-black text-md md:text-2xl min-w-[300px]' onClick={handleModalOpenBio}>Bio Dynamic Fuel</Button>
                     </div>
                 </div>
         </div>

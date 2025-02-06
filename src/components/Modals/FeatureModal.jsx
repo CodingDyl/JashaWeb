@@ -2,8 +2,26 @@ import { Modal, ScrollArea, Button, Text, Container } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../utils/motion';
 import { styles } from '../../styles';
+import { pipe_1, pipe_2, pipe_3, pipe_4, pipe_5, pipe_6, pipe_7, pipe_8, pipe_9, pipe_11, pipe_12,
+         steel_1, steel_2, steel_3, steel_4, steel_5, steel_6, steel_7, steel_8, steel_9, steel_10, steel_11, steel_12,
+         mild_1, mild_2, mild_3, mild_4, mild_5, mild_6, mild_7, mild_8 } from '../../assets';
 
 const FeatureModal = ({ opened, close, feature }) => {
+  const getFeatureImages = (featureTitle) => {
+    switch(featureTitle) {
+      case 'Piping':
+        return [pipe_1, pipe_2, pipe_3, pipe_4, pipe_5, pipe_6, pipe_7, pipe_8, pipe_9, pipe_11, pipe_12];
+      case 'Stainless Steel Fabrication':
+        return [steel_1, steel_2, steel_3, steel_4, steel_5, steel_6, steel_7, steel_8, steel_9, steel_10, steel_11, steel_12];
+      case 'Mild Steel Fabrication':
+        return [mild_1, mild_2, mild_3, mild_4, mild_5, mild_6, mild_7, mild_8];
+      default:
+        return [];
+    }
+  };
+
+  const featureImages = getFeatureImages(feature.title);
+
   return (
     <Modal 
       opened={opened}
@@ -30,8 +48,21 @@ const FeatureModal = ({ opened, close, feature }) => {
         <Text className="text-lg leading-relaxed">
           {feature.fullDescription || feature.description}
         </Text>
-        {/* Add more content here like images, specifications, etc. */}
       </Container>
+
+      {featureImages.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+          {featureImages.map((image, index) => (
+            <div key={index} className="relative aspect-square">
+              <img
+                src={image}
+                alt={`${feature.title} example ${index + 1}`}
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className='w-[50%] flex justify-center items-center align-middle mx-auto mt-5 md:mt-10'>
         <Button 
