@@ -148,43 +148,61 @@ const knitGal = [
     {
       img: knit01,
       title: 'Knit',
+      category: "mesh-demister"
     },
     {
       img: knit02,
       title: 'Knit',
+      category: "mesh-demister"
     },
+
     {
       img: knit03,
       title: 'Knit',
+      category: "mesh-demister"
     },
     {
       img: knit04,
       title: 'Knit',
+      category: "vane-demister"
     },
+
     {
       img: knit05,
       title: 'Knit',
+      category: "random-packing"
     },
+
     {
       img: knit06,
       title: 'Knit',
+      category: "structure-packing"
     },
+
     {
       img: knit07,
       title: 'Knit',
+      category: "column-internals"
     },
+
     {
       img: knit08,
       title: 'Knit',
+      category: "process-design"
     },
+
     {
       img: knit09,
       title: 'Knit',
+      category: "column-internals"
     },
+
     {
       img: knit10,
       title: 'Knit',
+      category: "vane-demister"
     },
+
   ];
 
 export {navLinks, footerLinks, contactPeople, jashaGal, knitGal, bioGal};

@@ -5,6 +5,7 @@ import { styles } from '../../styles';
 import { pipe_1, pipe_2, pipe_3, pipe_4, pipe_5, pipe_6, pipe_7, pipe_8, pipe_9, pipe_11, pipe_12,
          steel_1, steel_2, steel_3, steel_4, steel_5, steel_6, steel_7, steel_8, steel_9, steel_10, steel_11, steel_12,
          mild_1, mild_2, mild_3, mild_4, mild_5, mild_6, mild_7, mild_8 } from '../../assets';
+import { knitGal } from '../../constants';
 
 const FeatureModal = ({ opened, close, feature }) => {
   const getFeatureImages = (featureTitle) => {
@@ -15,6 +16,18 @@ const FeatureModal = ({ opened, close, feature }) => {
         return [steel_1, steel_2, steel_3, steel_4, steel_5, steel_6, steel_7, steel_8, steel_9, steel_10, steel_11, steel_12];
       case 'Mild Steel Fabrication':
         return [mild_1, mild_2, mild_3, mild_4, mild_5, mild_6, mild_7, mild_8];
+      case 'Mesh Demister':
+        return knitGal.filter(img => img.category === 'mesh-demister').map(img => img.img);
+      case 'Vane Demister':
+        return knitGal.filter(img => img.category === 'vane-demister').map(img => img.img);
+      case 'Random Packing':
+        return knitGal.filter(img => img.category === 'random-packing').map(img => img.img);
+      case 'Structure Packing':
+        return knitGal.filter(img => img.category === 'structure-packing').map(img => img.img);
+      case 'Column Internals':
+        return knitGal.filter(img => img.category === 'column-internals').map(img => img.img);
+      case 'Process Design':
+        return knitGal.filter(img => img.category === 'process-design').map(img => img.img);
       default:
         return [];
     }
