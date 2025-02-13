@@ -12,9 +12,9 @@ import ImageListKnitwire from '../ImagesList/ImageListKnitwire';
 import { knitwire_products_pdf } from '../../../public/index';
 import FeatureModal from './FeatureModal';
 
-function Feature({ icon: Icon, title, description, className, onClick, ...others }) {
+function Feature({ icon: Icon, title, description, className, ...others }) {
     return (
-      <div className={classes.feature} onClick={onClick} style={{ cursor: 'pointer' }} {...others}>
+      <div className={classes.feature} {...others}>
         <div className={classes.overlay} />
   
         <div className={classes.content}>
@@ -28,7 +28,7 @@ function Feature({ icon: Icon, title, description, className, onClick, ...others
         </div>
       </div>
     );
-  }
+}
 
 const mockdata = [
     {
@@ -82,8 +82,7 @@ const KnitModal = ({opened, close}) => {
     const items = mockdata.map((item) => (
         <Feature 
             {...item} 
-            key={item.title} 
-            onClick={() => handleFeatureClick(item)}
+            key={item.title}
         />
     ));
 

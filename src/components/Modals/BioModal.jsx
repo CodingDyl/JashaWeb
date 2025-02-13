@@ -30,7 +30,7 @@ const BioModal = ({opened, close}) => {
             <img 
                 src={bio_logo} 
                 alt='bio logo' 
-                className='px-4 w-auto h-full object-contain max-h-[80px]' 
+                className='px-4 w-auto h-full object-contain max-h-[80px] bg-white-100 rounded-md' 
             />
         </div>
 

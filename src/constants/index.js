@@ -12,13 +12,13 @@ const contactPeople = [
       name: 'Shaun Dalrymple',
       email: 'shaun@jasha.co.za',
       cell: '083 788 2730',
-      position: 'JSC | Bio Fuel | Knit Wire'
+      position: 'JCS | Bio Fuel | KnitWire'
     },
     {
       name: 'Warren Dalrymple',
       email: 'warren@jasha.co.za',
       cell: '065 881 7513',
-      position: 'JSC | Bio Fuel | Knit Wire'
+      position: 'JCS | Bio Fuel | KnitWire'
     },
   ];
 

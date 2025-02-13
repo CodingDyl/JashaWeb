@@ -3,7 +3,7 @@ import classes from './Faq.module.css';
 import Lottie from 'lottie-react';
 import animationData from '../../assets/faq_img.json'
 
-const fa1 = '59 Aletta Avenue 1609 Edenvale - Eden Glen Ext 18 Gauteng - SouthAfrica';
+const fa1 = '54 Mopedi Road, Sebenza, Edenvale 1609 - South Africa';
 
 const fa2 = "Our services encompass a wide range of offerings, including precision stainless steel fabrication tailored for diverse industrial applications, custom mild steel fabrication for durable projects, specialized plastic fabrication for versatile industrial solutions, efficient piping solutions ensuring seamless flow for various systems, and precision cut-to-size services to meet specific material requirements."
 
