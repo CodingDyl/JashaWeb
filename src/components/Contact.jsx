@@ -9,6 +9,8 @@ import { useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
 import EmployeeCard from './EmployeeCard';
 import.meta.env.JASHA_API_KEY
+import { notifications } from '@mantine/notifications';
+import { Notifications } from '@mantine/notifications';
 
 export function Contact() {
 
@@ -48,30 +50,65 @@ export function Contact() {
       validate.email(form.email) ||
       validate.subject(form.subject)
     ) {
-      // If any validation fails, display error message and prevent email sending
-      setLoading(false);
-      alert("Please fill out all the required fields correctly.");
+      notifications.show({
+        title: 'Validation Error',
+        message: 'Please fill out all the required fields correctly.',
+        color: 'red',
+        autoClose: 4000,
+        withBorder: true,
+        styles: (theme) => ({
+          root: {
+            backgroundColor: 'white',
+            '&::before': { backgroundColor: theme.colors.red[6] },
+          },
+          title: { color: 'black' },
+          description: { color: 'black' },
+          closeButton: {
+            color: 'black',
+            '&:hover': { backgroundColor: theme.colors.gray[1] },
+          },
+        }),
+      });
       return;
     }
 
     setLoading(true);
 
     emailjs.send(
-        'service_8ug5t08',
-        'template_89r4q4d',
+        'service_s34n27g',
+        'template_m74jauw',
         {
           from_name: form.name,
           to_name: "Jasha Consulting",
           from_email: form.email,
           to_email: "shaun@jasha.co.za",
           message: form.message,
+          subject: form.subject,
         },
-        'i_IFgvR2F8kYMIPmq'
+        'EfmDX1DNlIAyMCXdr'
       )
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          notifications.show({
+            title: 'Success!',
+            message: 'Thank you. We will get back to you as soon as possible.',
+            color: 'green',
+            autoClose: 4000,
+            withBorder: true,
+            styles: (theme) => ({
+              root: {
+                backgroundColor: 'white',
+                '&::before': { backgroundColor: theme.colors.green[6] },
+              },
+              title: { color: 'black' },
+              description: { color: 'black' },
+              closeButton: {
+                color: 'black',
+                '&:hover': { backgroundColor: theme.colors.gray[1] },
+              },
+            }),
+          });
 
           setForm({
             name: "",
@@ -83,8 +120,26 @@ export function Contact() {
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
+          
+          notifications.show({
+            title: 'Error',
+            message: 'Something went wrong. Please try again.',
+            color: 'red',
+            autoClose: 4000,
+            withBorder: true,
+            styles: (theme) => ({
+              root: {
+                backgroundColor: 'white',
+                '&::before': { backgroundColor: theme.colors.red[6] },
+              },
+              title: { color: 'black' },
+              description: { color: 'black' },
+              closeButton: {
+                color: 'black',
+                '&:hover': { backgroundColor: theme.colors.gray[1] },
+              },
+            }),
+          });
         }
       );
   };
@@ -99,7 +154,7 @@ export function Contact() {
         initial='hidden'
         whileInView='show'
         viewport={{once: true, amount: 0.25}}
-        className={`${styles.padding} max-w-7xl mx-auto relative z-0`}
+        className={`${styles.padding} max-w-7xl mx-auto relative z-0 mb-0`}
     >
         <div className='relative bg-tertiary/20 rounded-2xl p-12 backdrop-blur-sm shadow-xl'>
             {/* Decorative elements */}
