@@ -4,10 +4,21 @@ import { styles } from '../styles';
 import { staggerContainer, fadeIn, textVariant } from '../utils/motion'
 import { FeaturesAsymmetrical } from './FeaturesSection/FeaturesAsymmetrical';
 import Customers from './Slider/Customers';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   return (
     <>
+    <Helmet>
+      <title>About Jasha Consulting Services | Industrial Engineering Experts</title>
+      <meta name="description" content="Learn about Jasha Consulting Services - A leading industrial engineering company with over 18 years of experience in petro-chemical, chemical, sugar, paper, and precious metal industries." />
+      <meta name="keywords" content="Jasha Consulting about, industrial engineering, petro-chemical industry, chemical industry, sugar industry, paper industry, precious metal industry, ASME IX, AWS D1.1" />
+      <meta property="og:title" content="About Jasha Consulting Services | Industrial Engineering Experts" />
+      <meta property="og:description" content="Discover our 18+ years of expertise in industrial engineering and fabrication services across multiple industries." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://jasha.co.za/about" />
+      <link rel="canonical" href="https://jasha.co.za/about" />
+    </Helmet>
     <span id='about'>
             &nbsp;  
         </span>

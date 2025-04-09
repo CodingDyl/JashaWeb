@@ -10,6 +10,8 @@ import { Button } from '@mantine/core';
 import KnitModal from './Modals/KnitModal';
 import BioModal from './Modals/BioModal';
 import JashaModal from './Modals/JashaModal';
+import { Helmet } from 'react-helmet-async';
+
 const HomePage = () => {
     const [active, setActive] = useState("");
     const [toggle, setToggle] = useState(false);
@@ -31,6 +33,19 @@ const HomePage = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Jasha Consulting Services | Industrial Fabrication & Engineering Solutions</title>
+      <meta name="description" content="Jasha Consulting Services - Your trusted partner in industrial fabrication, engineering solutions, and sustainable energy since 2005. Specializing in stainless steel, mild steel, and plastic fabrication." />
+      <meta name="keywords" content="Jasha Consulting, industrial fabrication, engineering solutions, stainless steel fabrication, mild steel fabrication, plastic fabrication, piping solutions, South Africa" />
+      <meta property="og:title" content="Jasha Consulting Services | Industrial Fabrication & Engineering Solutions" />
+      <meta property="og:description" content="Your trusted partner in industrial fabrication, engineering solutions, and sustainable energy since 2005." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://jasha.co.za" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Jasha Consulting Services" />
+      <meta name="twitter:description" content="Your trusted partner in industrial fabrication and engineering solutions since 2005." />
+      <link rel="canonical" href="https://jasha.co.za" />
+    </Helmet>
     <section className="bg-pattern-sm md:bg-bg-pattern bg-cover bg-no-repeat bg-center bg-blend-overlay md:bg-fixed md:bg-black/60">
 
 

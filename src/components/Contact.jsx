@@ -11,6 +11,7 @@ import EmployeeCard from './EmployeeCard';
 import.meta.env.JASHA_API_KEY
 import { notifications } from '@mantine/notifications';
 import { Notifications } from '@mantine/notifications';
+import { Helmet } from 'react-helmet-async';
 
 export function Contact() {
 
@@ -146,6 +147,16 @@ export function Contact() {
 
   return (
     <>
+    <Helmet>
+      <title>Contact Jasha Consulting Services | Get in Touch</title>
+      <meta name="description" content="Contact Jasha Consulting Services for industrial fabrication and engineering solutions. Reach out to our experts for stainless steel, mild steel, and plastic fabrication services." />
+      <meta name="keywords" content="contact Jasha Consulting, industrial fabrication contact, engineering solutions contact, South Africa" />
+      <meta property="og:title" content="Contact Jasha Consulting Services | Get in Touch" />
+      <meta property="og:description" content="Get in touch with Jasha Consulting Services for expert industrial fabrication and engineering solutions." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://jasha.co.za/contact" />
+      <link rel="canonical" href="https://jasha.co.za/contact" />
+    </Helmet>
     <span id='contact'>
         &nbsp;  
     </span>
