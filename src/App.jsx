@@ -1,13 +1,12 @@
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePage from "./components/HomePage"
 import { MantineProvider } from "@mantine/core"
 import '@mantine/core/styles.css';
-import About from "./components/About";
 import { Footer } from "./components/Footer/Footer";
 import { Contact } from "./components/Contact";
-import Offer from "./components/Offer";
 import { Notifications } from '@mantine/notifications';
 import { HelmetProvider } from 'react-helmet-async';
+import NotFoundImage from "./components/ErrorPage/Error";
 
 function App() {
 
@@ -28,9 +27,16 @@ function App() {
         />
         <BrowserRouter>
           <div className="min-h-screen bg-primary text-white">
-            <HomePage />
-            <Contact />
-            <Footer />
+            <Routes>
+              <Route path="/" element={
+                <>
+                  <HomePage />
+                  <Contact />
+                  <Footer />
+                </>
+              } />
+              <Route path="*" element={<NotFoundImage />} />
+            </Routes>
           </div>
         </BrowserRouter>
       </MantineProvider>

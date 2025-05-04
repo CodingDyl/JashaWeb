@@ -81,6 +81,7 @@ import steel_10 from './stainless_steel_fab/steel_10.jpg'
 import steel_11 from './stainless_steel_fab/steel_11.jpg'
 import steel_12 from './stainless_steel_fab/steel_12.jpg'
 
+import error_404 from './error/404_img.png';
 
 
 
@@ -89,4 +90,5 @@ import steel_12 from './stainless_steel_fab/steel_12.jpg'
 
 
 
-export {steel_1, steel_2, steel_3, steel_4, steel_5, steel_6, steel_7, steel_8, steel_9, steel_10, steel_11, steel_12, mild_1, mild_2, mild_3, mild_4, mild_5, mild_6, mild_7, mild_8, pipe_1, pipe_2, pipe_3, pipe_4, pipe_5, pipe_6, pipe_7, pipe_8, pipe_9, pipe_11, pipe_12, bio_logo, bio_1, bio_2, bio_3, bio_4, logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol, knitwire, Image1, Image3, Image4, Image5, Image7, Image8, Image9, Image10, Image11, Image12, Image2, Image6, knit01, knit02, knit03, knit04, knit05, knit06, knit07, knit08, knit09, knit10}
+
+export {error_404, steel_1, steel_2, steel_3, steel_4, steel_5, steel_6, steel_7, steel_8, steel_9, steel_10, steel_11, steel_12, mild_1, mild_2, mild_3, mild_4, mild_5, mild_6, mild_7, mild_8, pipe_1, pipe_2, pipe_3, pipe_4, pipe_5, pipe_6, pipe_7, pipe_8, pipe_9, pipe_11, pipe_12, bio_logo, bio_1, bio_2, bio_3, bio_4, logo_bg, hero, anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol, knitwire, Image1, Image3, Image4, Image5, Image7, Image8, Image9, Image10, Image11, Image12, Image2, Image6, knit01, knit02, knit03, knit04, knit05, knit06, knit07, knit08, knit09, knit10}

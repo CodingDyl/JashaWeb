@@ -45,7 +45,48 @@ const HomePage = () => {
       <meta name="twitter:title" content="Jasha Consulting Services" />
       <meta name="twitter:description" content="Your trusted partner in industrial fabrication and engineering solutions since 2005." />
       <link rel="canonical" href="https://jasha.co.za" />
+      <script type="application/ld+json">
+        {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Jasha Consulting Services",
+            "url": "https://jasha.co.za",
+            "logo": "https://jasha.co.za${logo_bg}",
+            "description": "Industrial Fabrication and Engineering Solutions",
+            "foundingDate": "2005",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "South Africa"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/company/jasha-consulting-services",
+              "https://www.facebook.com/jashaconsulting"
+            ]
+          }
+        `}
+      </script>
     </Helmet>
+
+    {/* Hidden content for SEO - Modal content */}
+    <div className="sr-only" aria-hidden="true">
+      <div id="jasha-modal-content">
+        <h2>Jasha Consulting Services</h2>
+        <p>Industrial Fabrication and Engineering Solutions since 2005</p>
+        {/* Add more relevant content from your modal */}
+      </div>
+      <div id="knitwire-modal-content">
+        <h2>Knitwire</h2>
+        <p>Specialized wire mesh solutions</p>
+        {/* Add more relevant content from your modal */}
+      </div>
+      <div id="bio-modal-content">
+        <h2>Bio Dynamic Fuel</h2>
+        <p>Sustainable energy solutions</p>
+        {/* Add more relevant content from your modal */}
+      </div>
+    </div>
+
     <section className="bg-pattern-sm md:bg-bg-pattern bg-cover bg-no-repeat bg-center bg-blend-overlay md:bg-fixed md:bg-black/60">
 
 
