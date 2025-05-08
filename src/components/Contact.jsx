@@ -13,7 +13,7 @@ import { notifications } from '@mantine/notifications';
 import { Notifications } from '@mantine/notifications';
 import { Helmet } from 'react-helmet-async';
 
-export function Contact() {
+const Contact = () => {
 
   const formRef = useRef();
 
@@ -297,3 +297,5 @@ export function Contact() {
     </>
   );
 }
+
+export default Contact;

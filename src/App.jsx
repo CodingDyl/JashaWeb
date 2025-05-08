@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import HomePage from "./components/HomePage"
 import { MantineProvider } from "@mantine/core"
 import '@mantine/core/styles.css';
-import { Footer } from "./components/Footer/Footer";
-import { Contact } from "./components/Contact";
 import { Notifications } from '@mantine/notifications';
 import { HelmetProvider } from 'react-helmet-async';
 import NotFoundImage from "./components/ErrorPage/Error";
+import Home from "./page/Home";
+import Jasha from "./page/Jasha";
+import Knitwire from "./page/Knitwire";
+import BiodynamicFuel from "./page/BiodynamicFuel";
 
 function App() {
 
@@ -26,15 +27,12 @@ function App() {
           className="notification-container"
         />
         <BrowserRouter>
-          <div className="min-h-screen bg-primary text-white">
+          <div className="min-h-screen flex flex-col bg-primary text-white">
             <Routes>
-              <Route path="/" element={
-                <>
-                  <HomePage />
-                  <Contact />
-                  <Footer />
-                </>
-              } />
+              <Route path="/" element={<Home />} />
+              <Route path="/company/jasha" element={<Jasha />} />
+              <Route path="/company/knitwire" element={<Knitwire />} />
+              <Route path="/company/biodynamic-fuel" element={<BiodynamicFuel />} />
               <Route path="*" element={<NotFoundImage />} />
             </Routes>
           </div>

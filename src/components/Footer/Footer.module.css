@@ -1,6 +1,7 @@
 .footer {
-    margin-top: rem(120px);
+    margin-top: auto;
     border-top: 2px solid #C0C0C0;
+    width: 100%;
   }
   
   .inner {

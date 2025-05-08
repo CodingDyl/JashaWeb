@@ -3,7 +3,7 @@ import { logo_bg } from '../../assets';
 import classes from './Footer.module.css';
 import { Helmet } from 'react-helmet-async';
 
-export function Footer() {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -27,7 +27,7 @@ export function Footer() {
           `}
         </script>
       </Helmet>
-      <footer className={classes.footer} role="contentinfo">
+      <footer className={`${classes.footer} mt-5`} role="contentinfo">
         <Container className={classes.inner}>
           <img src={logo_bg} alt='Jasha Consulting Services Logo' className='h-10 object-contain' />
           <Text size="sm" c="dimmed">
@@ -38,3 +38,5 @@ export function Footer() {
     </>
   );
 }
+
+export default Footer;
