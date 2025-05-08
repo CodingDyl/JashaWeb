@@ -147,30 +147,6 @@ const Contact = () => {
 
   return (
     <>
-    <Helmet>
-      <title>Contact Jasha Consulting Services | Industrial Fabrication Experts</title>
-      <meta name="description" content="Get in touch with Jasha Consulting Services, South Africa's leading industrial fabrication experts. Contact us for stainless steel, mild steel, and plastic fabrication solutions." />
-      <meta name="keywords" content="Jasha Consulting Services, industrial fabrication contact, engineering solutions, South Africa, stainless steel fabrication, mild steel fabrication" />
-      <meta property="og:title" content="Contact Jasha Consulting Services | Industrial Fabrication Experts" />
-      <meta property="og:description" content="Get in touch with Jasha Consulting Services, South Africa's leading industrial fabrication experts." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://jasha.co.za/contact" />
-      <link rel="canonical" href="https://jasha.co.za/contact" />
-      <script type="application/ld+json">
-        {`
-          {
-            "@context": "https://schema.org",
-            "@type": "ContactPoint",
-            "name": "Jasha Consulting Services",
-            "description": "Industrial Fabrication and Engineering Solutions",
-            "url": "https://jasha.co.za",
-            "contactType": "customer service",
-            "areaServed": "South Africa",
-            "availableLanguage": ["English"]
-          }
-        `}
-      </script>
-    </Helmet>
     <span id='contact'>
         &nbsp;  
     </span>
