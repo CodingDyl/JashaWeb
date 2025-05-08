@@ -43,7 +43,7 @@ const Jasha = () => {
 
         <div className='w-[50%] flex justify-center items-center align-middle mx-auto mt-5 md:mt-10'>
           <Button variant='filled' size='lg' className='bg-[#00563B] hover:bg-[#00563B]/30 border-2 border-black text-md md:text-2xl max-w-[220px] min-w-full text-white m-auto'>
-            <a href="#contact">Contact Us</a>
+            <a href="/#contact">Contact Us</a>
           </Button>
         </div>
       </div>
