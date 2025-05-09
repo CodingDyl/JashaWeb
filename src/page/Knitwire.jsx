@@ -12,7 +12,7 @@ import ImageListKnitwire from '../components/ImagesList/ImageListKnitwire';
 import FeatureModal from '../components/Modals/FeatureModal';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar';
-
+import { Link } from 'react-router-dom';
 function Feature({ icon: Icon, title, description, className, ...others }) {
   return (
     <div className={classes.feature} {...others}>
@@ -130,7 +130,7 @@ const Knitwire = () => {
 
         <div className='w-[50%] flex justify-center items-center align-middle mx-auto mt-5 md:mt-10'>
           <Button variant='filled' size='lg' className='bg-[#00563B] hover:bg-[#00563B]/30 border-2 border-black text-md md:text-2xl max-w-[220px] min-w-full text-white m-auto'>
-            <a href="/#contact">Contact Us</a>
+            <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
       </div>

@@ -8,6 +8,8 @@ import Home from "./page/Home";
 import Jasha from "./page/Jasha";
 import Knitwire from "./page/Knitwire";
 import BiodynamicFuel from "./page/BiodynamicFuel";
+import ContactPage from "./page/ContactPage";
+import AboutPage from "./page/AboutPage";
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
           <div className="min-h-screen flex flex-col bg-primary text-white">
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
               <Route path="/company/jasha" element={<Jasha />} />
               <Route path="/company/knitwire" element={<Knitwire />} />
               <Route path="/company/biodynamic-fuel" element={<BiodynamicFuel />} />

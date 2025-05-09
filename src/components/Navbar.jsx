@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import { MdClose, MdMenu } from 'react-icons/md';
 import { styles } from '../styles';
@@ -8,7 +8,22 @@ import { logo_bg } from '../assets';
 const Navbar = () => {
     const [active, setActive] = useState("");
     const [toggle, setToggle] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const getContactLink = (link) => {
         if (link.id === '#contact') {
@@ -18,7 +33,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-black/40 md:bg-transparent`}>
+        <nav className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 transition-all duration-300 ${scrolled ? 'bg-black/80' : 'bg-black/40 md:bg-transparent'}`}>
             <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
                 <Link to="/" className="flex items-center gap-2" onClick={() => { setActive(""); window.scrollTo(0, 0); }}>
                     <img src={logo_bg} alt="logo" className="h-10 object-contain border-0" />

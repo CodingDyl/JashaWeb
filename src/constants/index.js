@@ -2,7 +2,15 @@ import { Image1, Image3, Image10, Image4, Image5, Image7, Image8, Image9, Image1
 
 const navLinks = [
     {
-        id: "#contact",
+        id: "/",
+        title: "Home"
+    },
+    {
+        id: "/about",
+        title: "About Us"
+    },
+    {
+        id: "/contact",
         title: "Contact Us"
     },
 ];
