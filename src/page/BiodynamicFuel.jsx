@@ -9,6 +9,7 @@ import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import StructuredData from '../components/StructuredData';
 
 const BiodynamicFuel = () => {
   return (
@@ -24,6 +25,40 @@ const BiodynamicFuel = () => {
       <meta property="og:image" content="https://jasha.co.za/src/assets/bio_logo_no_bg.png" />
       <link rel="canonical" href="https://jasha.co.za/company/biodynamic-fuel" />
     </Helmet>
+
+    <StructuredData 
+      type="Organization"
+      data={{
+        name: "Bio Dynamic Fuel",
+        url: "https://jasha.co.za/company/biodynamic-fuel",
+        logo: "https://jasha.co.za/src/assets/bio_logo_no_bg.png",
+        description: "Leading provider of sustainable biodiesel solutions with patented B-Tech 40 technology",
+        foundingDate: "2005",
+        socialLinks: [
+          "https://www.linkedin.com/company/jasha-consulting-services",
+          "https://www.facebook.com/jashaconsulting"
+        ]
+      }}
+    />
+
+    <StructuredData 
+      type="Service"
+      data={{
+        name: "Biodiesel Production Solutions",
+        description: "Sustainable biodiesel production technology and solutions, featuring the patented B-Tech 40 system for efficient and environmentally responsible biodiesel manufacturing",
+        serviceType: "Renewable Energy"
+      }}
+    />
+
+    <StructuredData 
+      type="WebPage"
+      data={{
+        name: "Bio Dynamic Fuel - Sustainable Energy Solutions",
+        description: "Leading provider of sustainable biodiesel solutions with patented B-Tech 40 technology",
+        url: "https://jasha.co.za/company/biodynamic-fuel"
+      }}
+    />
+    
     <div className="min-h-screen bg-black text-white py-20">
         <Navbar />
       <div className="container mx-auto px-4">

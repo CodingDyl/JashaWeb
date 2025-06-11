@@ -13,6 +13,9 @@ import FeatureModal from '../components/Modals/FeatureModal';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import StructuredData from '../components/StructuredData';
+
 function Feature({ icon: Icon, title, description, className, ...others }) {
   return (
     <div className={classes.feature} {...others}>
@@ -89,14 +92,76 @@ const Knitwire = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Knitwire | Specialized Wire Mesh Solutions</title>
+      <meta name="description" content="Knitwire - Leading provider of specialized wire mesh solutions for industrial applications. Offering high-quality mesh demisters, vane demisters, and column internals for various industries." />
+      <meta name="keywords" content="Knitwire, wire mesh solutions, mesh demisters, vane demisters, column internals, industrial mesh, South Africa" />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content="Knitwire | Specialized Wire Mesh Solutions" />
+      <meta property="og:description" content="Leading provider of specialized wire mesh solutions for industrial applications. High-quality mesh demisters and column internals." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://jasha.co.za/company/knitwire" />
+      <meta property="og:image" content="https://jasha.co.za/src/assets/knitwire_logo.png" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Knitwire - Wire Mesh Solutions" />
+      <meta name="twitter:description" content="Leading provider of specialized wire mesh solutions for industrial applications." />
+      <meta name="twitter:image" content="https://jasha.co.za/src/assets/knitwire_logo.png" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href="https://jasha.co.za/company/knitwire" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Knitwire" />
+      <meta name="geo.region" content="ZA" />
+      <meta name="geo.placename" content="South Africa" />
+    </Helmet>
+
+    <StructuredData 
+      type="Organization"
+      data={{
+        name: "Knitwire",
+        url: "https://jasha.co.za/company/knitwire",
+        logo: "https://jasha.co.za/src/assets/knitwire_logo.png",
+        description: "Leading provider of specialized wire mesh solutions for industrial applications",
+        foundingDate: "2005",
+        socialLinks: [
+          "https://www.linkedin.com/company/jasha-consulting-services",
+          "https://www.facebook.com/jashaconsulting"
+        ]
+      }}
+    />
+
+    <StructuredData 
+      type="Service"
+      data={{
+        name: "Wire Mesh Solutions",
+        description: "Specialized wire mesh solutions including mesh demisters, vane demisters, and column internals for various industries",
+        serviceType: "Industrial Wire Mesh"
+      }}
+    />
+
+    <StructuredData 
+      type="WebPage"
+      data={{
+        name: "Knitwire - Wire Mesh Solutions",
+        description: "Leading provider of specialized wire mesh solutions for industrial applications",
+        url: "https://jasha.co.za/company/knitwire"
+      }}
+    />
+
     <div className="min-h-screen bg-black text-white py-20">
         <Navbar />
       <div className="container mx-auto px-4">
         <div className="w-[100%] h-[15%] flex items-center justify-center py-4">
           <img 
             src={knitwire} 
-            alt='knitwire logo' 
-            className='px-4 w-auto h-full object-contain max-h-[80px]' 
+            alt='Knitwire Logo' 
+            className='px-4 w-auto h-full object-contain max-h-[80px] bg-white-100 rounded-md' 
+            loading="eager"
           />
         </div>
 

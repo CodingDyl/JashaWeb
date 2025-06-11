@@ -10,15 +10,74 @@ import ImageListJasha from '../components/ImagesList/ImageListJasha';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import StructuredData from '../components/StructuredData';
 
 const Jasha = () => {
   return (
     <>
+    <Helmet>
+      <title>Jasha Consulting Services | Industrial Fabrication & Engineering</title>
+      <meta name="description" content="Jasha Consulting Services - Your trusted partner in industrial fabrication and engineering since 2005. Specializing in stainless steel, mild steel, and plastic fabrication for petro-chemical, chemical, and sugar industries." />
+      <meta name="keywords" content="Jasha Consulting, industrial fabrication, engineering solutions, stainless steel fabrication, mild steel fabrication, plastic fabrication, piping solutions, South Africa" />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content="Jasha Consulting Services | Industrial Fabrication & Engineering" />
+      <meta property="og:description" content="Your trusted partner in industrial fabrication and engineering since 2005. Specializing in stainless steel, mild steel, and plastic fabrication." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://jasha.co.za/company/jasha" />
+      <meta property="og:image" content="https://jasha.co.za/src/assets/logo-white.png" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Jasha Consulting Services" />
+      <meta name="twitter:description" content="Your trusted partner in industrial fabrication and engineering since 2005." />
+      <meta name="twitter:image" content="https://jasha.co.za/src/assets/logo-white.png" />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href="https://jasha.co.za/company/jasha" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Jasha Consulting Services" />
+      <meta name="geo.region" content="ZA" />
+      <meta name="geo.placename" content="South Africa" />
+    </Helmet>
+    
+    <StructuredData 
+      type="Organization"
+      data={{
+        name: "Jasha Consulting Services",
+        url: "https://jasha.co.za/company/jasha",
+        logo: "https://jasha.co.za/src/assets/logo-white.png",
+        description: "Your trusted partner in industrial fabrication and engineering since 2005",
+        foundingDate: "2005",
+        socialLinks: [
+          "https://www.linkedin.com/company/jasha-consulting-services",
+          "https://www.facebook.com/jashaconsulting"
+        ]
+      }}
+    />
+
+    <StructuredData 
+      type="Service"
+      data={{
+        name: "Industrial Fabrication & Engineering",
+        description: "Specializing in stainless steel, mild steel, and plastic fabrication for petro-chemical, chemical, and sugar industries",
+        serviceType: "Industrial Fabrication"
+      }}
+    />
+    
     <div className="min-h-screen bg-black text-white py-20">
         <Navbar />
       <div className="container mx-auto px-4">
         <div className="w-[100%] h-[10%]">
-          <img src={logo_bg} alt='jasha logo' className='px-2 w-[200px] h-auto mx-auto bg-no-repeat bg-center' />
+          <img 
+            src={logo_bg} 
+            alt='Jasha Consulting Services Logo' 
+            className='px-2 w-[200px] h-auto mx-auto bg-no-repeat bg-center' 
+            loading="eager"
+          />
         </div>
 
         <motion.div variants={fadeIn("", "", 0.1, 1)} className="mt-10 text-center mx-auto">
