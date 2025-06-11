@@ -3,9 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {anglo, air_products, aeci, mondi, natref, omnia, safripol, sappi, sasol} from '../../assets'
-import { motion } from "framer-motion";
-import { textVariant } from "../../utils/motion";
-import { styles } from "../../styles";
 
 export default class Customers extends Component {
     render() {
@@ -51,31 +48,31 @@ export default class Customers extends Component {
             <div className="mainContainer mx-10 px-10">
                 <Slider {...settings}>
                     <div className="container">
-                        <img src={anglo}  alt="mpact" className="md:w-[220px] w-[150px]"/>
+                        <img src={anglo} alt="Anglo American" className="md:w-[220px] w-[150px]" loading="lazy" />
                     </div>
                     <div className="container">
-                        <img src={air_products} alt="Deloitte" className="md:w-[220px] w-[150px]"/>
+                        <img src={air_products} alt="Air Products" className="md:w-[220px] w-[150px]" loading="lazy" />
                     </div>
                     <div className="container">
-                        <img src={aeci} alt="rbh" className="md:w-[220px] w-[150px]"/>
+                        <img src={aeci} alt="AECI" className="md:w-[220px] w-[150px]" loading="lazy" />
                     </div>
                     <div className="container">
-                        <img src={mondi} alt="pwc" className="md:w-[220px] w-[150px]"/>
+                        <img src={mondi} alt="Mondi" className="md:w-[220px] w-[150px]" loading="lazy" />
                     </div>
                     <div className="container">
-                        <img src={natref} alt="spar" className="md:w-[220px] w-[150px]"/>
+                        <img src={natref} alt="Natref" className="md:w-[220px] w-[150px]" loading="lazy" />
                     </div>
                     <div className="container">
-                        <img src={omnia} alt="ISS" className="md:w-[220px] w-[150px]"/>
+                        <img src={omnia} alt="Omnia" className="md:w-[220px] w-[150px]" loading="lazy" />
                     </div>
                     <div className="container">
-                        <img src={safripol} alt="ISS" className="md:w-[220px] w-[150px]"/>
+                        <img src={safripol} alt="Safripol" className="md:w-[220px] w-[150px]" loading="lazy" />
                     </div>
                     <div className="container">
-                        <img src={sappi} alt="ISS" className="md:w-[220px] w-[150px]"/>
+                        <img src={sappi} alt="Sappi" className="md:w-[220px] w-[150px]" loading="lazy" />
                     </div>
                     <div className="container">
-                        <img src={sasol} alt="ISS" className="md:w-[220px] w-[150px]"/>
+                        <img src={sasol} alt="Sasol" className="md:w-[220px] w-[150px]" loading="lazy" />
                     </div>
                 </Slider>
             </div>

@@ -8,16 +8,29 @@ import ImageListBio from '../components/ImagesList/ImageListBio';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
 const BiodynamicFuel = () => {
   return (
     <>
+    <Helmet>
+      <title>Bio Dynamic Fuel | Sustainable Energy Solutions</title>
+      <meta name="description" content="Bio Dynamic Fuel - Leading provider of sustainable biodiesel solutions. Our patented B-Tech 40 technology makes biodiesel production accessible and environmentally responsible." />
+      <meta name="keywords" content="Bio Dynamic Fuel, biodiesel production, sustainable energy, B-Tech 40, carbon neutral, waste cooking oil, South Africa" />
+      <meta property="og:title" content="Bio Dynamic Fuel | Sustainable Energy Solutions" />
+      <meta property="og:description" content="Leading provider of sustainable biodiesel solutions with patented B-Tech 40 technology." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://jasha.co.za/company/biodynamic-fuel" />
+      <meta property="og:image" content="https://jasha.co.za/src/assets/bio_logo_no_bg.png" />
+      <link rel="canonical" href="https://jasha.co.za/company/biodynamic-fuel" />
+    </Helmet>
     <div className="min-h-screen bg-black text-white py-20">
         <Navbar />
       <div className="container mx-auto px-4">
         <div className="w-[100%] h-[15%] flex items-center justify-center py-4">
           <img 
             src={bio_logo} 
-            alt='bio logo' 
+            alt='Bio Dynamic Fuel Logo' 
             className='px-4 w-auto h-full object-contain max-h-[80px] bg-white-100 rounded-md' 
           />
         </div>

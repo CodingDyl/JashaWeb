@@ -69,8 +69,9 @@ const FeatureModal = ({ opened, close, feature }) => {
             <div key={index} className="relative aspect-square">
               <img
                 src={image}
-                alt={`${feature.title} example ${index + 1}`}
+                alt={`${feature.title} - ${feature.description?.split('.')[0] || 'Professional work example'} ${index + 1}`}
                 className="w-full h-full object-cover rounded-lg"
+                loading="lazy"
               />
             </div>
           ))}
