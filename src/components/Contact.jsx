@@ -12,11 +12,12 @@ import.meta.env.JASHA_API_KEY
 import { notifications } from '@mantine/notifications';
 import { Notifications } from '@mantine/notifications';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 const Contact = () => {
-
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   const formRef = useRef();
-
 
   const validate = {
     name: (value) => value.trim().length < 2,
@@ -147,6 +148,11 @@ const Contact = () => {
 
   return (
     <>
+    {isHomePage && (
+      <Helmet>
+        <meta name="robots" content="noindex" />
+      </Helmet>
+    )}
     <span id='contact'>
         &nbsp;  
     </span>
