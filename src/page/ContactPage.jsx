@@ -15,7 +15,6 @@ const ContactPage = () => {
       <meta property="og:description" content="Get in touch with Jasha Consulting Services for industrial fabrication and engineering solutions." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://jasha.co.za/contact" />
-      <link rel="canonical" href="https://jasha.co.za/contact" />
     </Helmet>
     <div className="min-h-screen bg-primary text-white">
         <Navbar />

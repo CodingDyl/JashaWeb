@@ -1,6 +1,5 @@
 import React from 'react'
 import HomePage from '../components/HomePage'
-import Contact from '../components/Contact'
 import Footer from '../components/Footer/Footer'
 import { Helmet } from 'react-helmet-async';
 import { logo_bg } from '../assets';
@@ -19,7 +18,6 @@ const Home = () => {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Jasha Consulting Services" />
       <meta name="twitter:description" content="Your trusted partner in industrial fabrication and engineering solutions since 2005." />
-      <link rel="canonical" href="https://jasha.co.za" />
       <script type="application/ld+json">
         {`
           {
@@ -44,7 +42,6 @@ const Home = () => {
     </Helmet>
     <div className="min-h-screen bg-primary text-white">
             <HomePage />
-            <Contact />
             <Footer />
     </div>
     </>

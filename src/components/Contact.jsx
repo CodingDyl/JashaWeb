@@ -148,11 +148,6 @@ const Contact = () => {
 
   return (
     <>
-    {isHomePage && (
-      <Helmet>
-        <meta name="robots" content="noindex" />
-      </Helmet>
-    )}
     <span id='contact'>
         &nbsp;  
     </span>
