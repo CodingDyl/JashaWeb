@@ -5,6 +5,7 @@ import { staggerContainer, fadeIn, textVariant } from '../utils/motion'
 import { FeaturesAsymmetrical } from './FeaturesSection/FeaturesAsymmetrical';
 import Customers from './Slider/Customers';
 import { Helmet } from 'react-helmet-async';
+import StructuredData from './StructuredData';
 
 const About = () => {
   return (
@@ -13,12 +14,54 @@ const About = () => {
       <title>About Jasha Consulting Services | Industrial Engineering Experts</title>
       <meta name="description" content="Learn about Jasha Consulting Services - A leading industrial engineering company with over 18 years of experience in petro-chemical, chemical, sugar, paper, and precious metal industries." />
       <meta name="keywords" content="Jasha Consulting about, industrial engineering, petro-chemical industry, chemical industry, sugar industry, paper industry, precious metal industry, ASME IX, AWS D1.1" />
+      
+      {/* Open Graph Meta Tags */}
       <meta property="og:title" content="About Jasha Consulting Services | Industrial Engineering Experts" />
       <meta property="og:description" content="Discover our 18+ years of expertise in industrial engineering and fabrication services across multiple industries." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://jasha.co.za/about" />
+      <meta property="og:image" content="https://jasha.co.za/src/assets/logo-white.png" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="About Jasha Consulting Services | Industrial Engineering Experts" />
+      <meta name="twitter:description" content="Discover our 18+ years of expertise in industrial engineering and fabrication services across multiple industries." />
+      <meta name="twitter:image" content="https://jasha.co.za/src/assets/logo-white.png" />
+      
+      {/* Canonical URL */}
       <link rel="canonical" href="https://jasha.co.za/about" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Jasha Consulting Services" />
+      <meta name="geo.region" content="ZA" />
+      <meta name="geo.placename" content="South Africa" />
     </Helmet>
+
+    <StructuredData 
+      type="WebPage"
+      data={{
+        name: "About Jasha Consulting Services | Industrial Engineering Experts",
+        description: "Learn about Jasha Consulting Services - A leading industrial engineering company with over 18 years of experience",
+        url: "https://jasha.co.za/about"
+      }}
+    />
+
+    <StructuredData 
+      type="Organization"
+      data={{
+        name: "Jasha Consulting Services",
+        url: "https://jasha.co.za/about",
+        logo: "https://jasha.co.za/src/assets/logo-white.png",
+        description: "A leading industrial engineering company with over 18 years of experience",
+        foundingDate: "2005",
+        socialLinks: [
+          "https://www.linkedin.com/company/jasha-consulting-services",
+          "https://www.facebook.com/jashaconsulting"
+        ]
+      }}
+    />
+
     <span id='about'>
             &nbsp;  
         </span>

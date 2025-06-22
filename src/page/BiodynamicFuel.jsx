@@ -18,12 +18,28 @@ const BiodynamicFuel = () => {
       <title>Bio Dynamic Fuel | Sustainable Energy Solutions</title>
       <meta name="description" content="Bio Dynamic Fuel - Leading provider of sustainable biodiesel solutions. Our patented B-Tech 40 technology makes biodiesel production accessible and environmentally responsible." />
       <meta name="keywords" content="Bio Dynamic Fuel, biodiesel production, sustainable energy, B-Tech 40, carbon neutral, waste cooking oil, South Africa" />
+      
+      {/* Open Graph Meta Tags */}
       <meta property="og:title" content="Bio Dynamic Fuel | Sustainable Energy Solutions" />
       <meta property="og:description" content="Leading provider of sustainable biodiesel solutions with patented B-Tech 40 technology." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://jasha.co.za/company/biodynamic-fuel" />
       <meta property="og:image" content="https://jasha.co.za/src/assets/bio_logo_no_bg.png" />
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Bio Dynamic Fuel - Sustainable Energy Solutions" />
+      <meta name="twitter:description" content="Leading provider of sustainable biodiesel solutions with patented B-Tech 40 technology." />
+      <meta name="twitter:image" content="https://jasha.co.za/src/assets/bio_logo_no_bg.png" />
+      
+      {/* Canonical URL */}
       <link rel="canonical" href="https://jasha.co.za/company/biodynamic-fuel" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Bio Dynamic Fuel" />
+      <meta name="geo.region" content="ZA" />
+      <meta name="geo.placename" content="South Africa" />
     </Helmet>
 
     <StructuredData 

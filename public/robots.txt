@@ -1,5 +1,13 @@
 User-agent: *
 Allow: /
 
+# Disallow admin or private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
 # Sitemap location
-Sitemap: https://jasha.co.za/sitemap.xml 
+Sitemap: https://jasha.co.za/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1 
