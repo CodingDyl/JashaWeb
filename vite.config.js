@@ -22,5 +22,16 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true
+  },
+  // Add prerender configuration for better SEO
+  prerender: {
+    routes: [
+      '/',
+      '/about',
+      '/contact',
+      '/company/jasha',
+      '/company/knitwire',
+      '/company/biodynamic-fuel'
+    ]
   }
 })
