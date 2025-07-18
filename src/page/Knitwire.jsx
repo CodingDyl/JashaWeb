@@ -101,17 +101,17 @@ const Knitwire = () => {
       <meta property="og:title" content="Knitwire | Specialized Wire Mesh Solutions" />
       <meta property="og:description" content="Leading provider of specialized wire mesh solutions for industrial applications. High-quality mesh demisters and column internals." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://jasha.co.za/company/knitwire" />
-      <meta property="og:image" content="https://jasha.co.za/src/assets/knitwire_logo.png" />
+          <meta property="og:url" content="https://www.jasha.co.za/company/knitwire" />
+    <meta property="og:image" content="https://www.jasha.co.za/src/assets/knitwire_logo.png" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Knitwire - Wire Mesh Solutions" />
       <meta name="twitter:description" content="Leading provider of specialized wire mesh solutions for industrial applications." />
-      <meta name="twitter:image" content="https://jasha.co.za/src/assets/knitwire_logo.png" />
+      <meta name="twitter:image" content="https://www.jasha.co.za/src/assets/knitwire_logo.png" />
       
       {/* Canonical URL */}
-      <link rel="canonical" href="https://jasha.co.za/company/knitwire" />
+      <link rel="canonical" href="https://www.jasha.co.za/company/knitwire" />
       
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
@@ -124,8 +124,8 @@ const Knitwire = () => {
       type="Organization"
       data={{
         name: "Knitwire",
-        url: "https://jasha.co.za/company/knitwire",
-        logo: "https://jasha.co.za/src/assets/knitwire_logo.png",
+        url: "https://www.jasha.co.za/company/knitwire",
+        logo: "https://www.jasha.co.za/src/assets/knitwire_logo.png",
         description: "Leading provider of specialized wire mesh solutions for industrial applications",
         foundingDate: "2005",
         socialLinks: [
@@ -149,7 +149,7 @@ const Knitwire = () => {
       data={{
         name: "Knitwire - Wire Mesh Solutions",
         description: "Leading provider of specialized wire mesh solutions for industrial applications",
-        url: "https://jasha.co.za/company/knitwire"
+        url: "https://www.jasha.co.za/company/knitwire"
       }}
     />
 

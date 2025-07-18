@@ -25,17 +25,17 @@ const Jasha = () => {
       <meta property="og:title" content="Jasha Consulting Services | Industrial Fabrication & Engineering" />
       <meta property="og:description" content="Your trusted partner in industrial fabrication and engineering since 2005. Specializing in stainless steel, mild steel, and plastic fabrication." />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://jasha.co.za/company/jasha" />
-      <meta property="og:image" content="https://jasha.co.za/src/assets/logo-white.png" />
+          <meta property="og:url" content="https://www.jasha.co.za/company/jasha" />
+    <meta property="og:image" content="https://www.jasha.co.za/src/assets/logo-white.png" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Jasha Consulting Services" />
       <meta name="twitter:description" content="Your trusted partner in industrial fabrication and engineering since 2005." />
-      <meta name="twitter:image" content="https://jasha.co.za/src/assets/logo-white.png" />
+      <meta name="twitter:image" content="https://www.jasha.co.za/src/assets/logo-white.png" />
       
       {/* Canonical URL */}
-      <link rel="canonical" href="https://jasha.co.za/company/jasha" />
+      <link rel="canonical" href="https://www.jasha.co.za/company/jasha" />
       
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
@@ -48,8 +48,8 @@ const Jasha = () => {
       type="Organization"
       data={{
         name: "Jasha Consulting Services",
-        url: "https://jasha.co.za/company/jasha",
-        logo: "https://jasha.co.za/src/assets/logo-white.png",
+        url: "https://www.jasha.co.za/company/jasha",
+        logo: "https://www.jasha.co.za/src/assets/logo-white.png",
         description: "Your trusted partner in industrial fabrication and engineering since 2005",
         foundingDate: "2005",
         socialLinks: [

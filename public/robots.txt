@@ -24,7 +24,7 @@ Allow: /*.gif
 Allow: /*.svg
 
 # Sitemap location
-Sitemap: https://jasha.co.za/sitemap.xml
+Sitemap: https://www.jasha.co.za/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1 

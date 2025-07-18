@@ -6,7 +6,4 @@
 /company/biodynamic-fuel    /index.html   200
 /company/jasha    /index.html   200
 /about    /index.html   200
-/contact    /index.html   200
-
-# Remove www redirects to prevent conflicts
-/www/*    /:splat    301 
+/contact    /index.html   200 

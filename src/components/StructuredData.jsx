@@ -47,7 +47,7 @@ const StructuredData = ({ type, data }) => {
           "isPartOf": {
             "@type": "WebSite",
             "name": "Jasha Consulting Services",
-            "url": "https://jasha.co.za"
+            "url": "https://www.jasha.co.za"
           }
         };
       
