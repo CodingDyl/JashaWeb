@@ -9,9 +9,18 @@
     <!-- Base URL configuration -->
     <base href="/" />
     
-    <!-- Prevent redirects and ensure proper SPA handling -->
-    <meta name="robots" content="index, follow, noarchive" />
-    <meta name="googlebot" content="index, follow, noarchive" />
+    <!-- Critical SEO Meta Tags for GSC Validation -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="google" content="notranslate" />
+    
+    <!-- Default Meta Tags -->
+    <meta name="author" content="Jasha Consulting Services" />
+    <meta name="geo.region" content="ZA" />
+    <meta name="geo.placename" content="South Africa" />
+    <meta name="language" content="en" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <meta name="msapplication-TileColor" content="#0ea5e9" />
     
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,10 +30,11 @@
     <link rel="dns-prefetch" href="//www.google-analytics.com" />
     <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     
-    <!-- Default meta tags -->
-    <meta name="author" content="Jasha Consulting Services" />
-    <meta name="geo.region" content="ZA" />
-    <meta name="geo.placename" content="South Africa" />
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     
 
   </head>

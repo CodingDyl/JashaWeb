@@ -1,20 +1,15 @@
 User-agent: *
 Allow: /
 
-# Allow specific company routes
+# Allow all important pages and resources
+Allow: /about
+Allow: /contact
 Allow: /company/
 Allow: /company/knitwire
 Allow: /company/biodynamic-fuel
 Allow: /company/jasha
 
-# Disallow admin or private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-
-# Allow important resources
-Allow: /sitemap.xml
-Allow: /robots.txt
+# Allow static assets
 Allow: /*.js
 Allow: /*.css
 Allow: /*.png
@@ -22,6 +17,20 @@ Allow: /*.jpg
 Allow: /*.jpeg
 Allow: /*.gif
 Allow: /*.svg
+Allow: /*.webp
+Allow: /*.pdf
+
+# Allow important files
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /manifest.json
+
+# Disallow admin or private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
 
 # Sitemap location
 Sitemap: https://www.jasha.co.za/sitemap.xml

@@ -54,7 +54,7 @@ const ContactPage = () => {
       }}
     />
 
-    <div className="min-h-screen bg-primary text-white">
+    <div className="min-h-screen bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white">
         <Navbar />
         <Contact />
         <Footer />
