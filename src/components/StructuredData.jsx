@@ -7,13 +7,19 @@ const StructuredData = ({ type, data }) => {
         return {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": data.name,
-          "url": data.url,
-          "logo": data.logo,
-          "description": data.description,
-          "foundingDate": data.foundingDate,
-          "address": data.address,
-          "sameAs": data.sameAs || [],
+          "name": "Jasha Consulting Services",
+          "description": "Leading industrial engineering company specializing in stainless steel, mild steel, and plastic fabrication",
+          "url": "https://jasha.co.za",
+          "logo": "https://jasha.co.za/src/assets/logo-white.png",
+          "foundingDate": "2005",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "South Africa"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/jasha-consulting-services",
+            "https://www.facebook.com/jashaconsulting"
+          ],
           "contactPoint": data.contactPoint || [],
           "areaServed": {
             "@type": "Country",
@@ -41,7 +47,7 @@ const StructuredData = ({ type, data }) => {
           "isPartOf": {
             "@type": "WebSite",
             "name": "Jasha Consulting Services",
-            "url": "https://www.jasha.co.za"
+            "url": "https://jasha.co.za"
           }
         };
       
@@ -73,16 +79,16 @@ const StructuredData = ({ type, data }) => {
           "@type": "Service",
           "name": data.name,
           "description": data.description,
+          "serviceType": data.serviceType,
           "provider": {
             "@type": "Organization",
             "name": "Jasha Consulting Services",
-            "url": "https://www.jasha.co.za"
+            "url": "https://jasha.co.za"
           },
           "areaServed": {
             "@type": "Country",
             "name": "South Africa"
-          },
-          "serviceType": data.serviceType
+          }
         };
       
       default:

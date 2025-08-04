@@ -58,39 +58,48 @@ const BiodynamicFuel = () => {
       <meta name="keywords" content="Bio Dynamic Fuel, biodiesel production, sustainable energy, B-Tech 40, carbon neutral, waste cooking oil, South Africa" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content="Bio Dynamic Fuel | Sustainable Energy Solutions" />
-      <meta property="og:description" content="Leading provider of sustainable biodiesel solutions with patented B-Tech 40 technology." />
+      <meta property="og:title" content="Biodynamic Fuel | Sustainable Biofuel Solutions" />
+      <meta property="og:description" content="Innovative biofuel solutions for sustainable energy. Biodynamic Fuel specializes in renewable fuel technologies and green energy solutions." />
       <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://www.jasha.co.za/company/biodynamic-fuel" />
-    <meta property="og:image" content="https://www.jasha.co.za/src/assets/bio_logo_no_bg.png" />
+      <meta property="og:url" content="https://jasha.co.za/company/biodynamic-fuel" />
+      <meta property="og:image" content="https://jasha.co.za/src/assets/bio_logo_no_bg.png" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Bio Dynamic Fuel - Sustainable Energy Solutions" />
-      <meta name="twitter:description" content="Leading provider of sustainable biodiesel solutions with patented B-Tech 40 technology." />
-      <meta name="twitter:image" content="https://www.jasha.co.za/src/assets/bio_logo_no_bg.png" />
+      <meta name="twitter:title" content="Biodynamic Fuel | Sustainable Biofuel Solutions" />
+      <meta name="twitter:description" content="Innovative biofuel solutions for sustainable energy. Biodynamic Fuel specializes in renewable fuel technologies and green energy solutions." />
+      <meta name="twitter:image" content="https://jasha.co.za/src/assets/bio_logo_no_bg.png" />
       
       {/* Canonical URL */}
-      <link rel="canonical" href="https://www.jasha.co.za/company/biodynamic-fuel" />
+      <link rel="canonical" href="https://jasha.co.za/company/biodynamic-fuel" />
       
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
-      <meta name="author" content="Bio Dynamic Fuel" />
+      <meta name="author" content="Biodynamic Fuel" />
       <meta name="geo.region" content="ZA" />
       <meta name="geo.placename" content="South Africa" />
     </Helmet>
 
     <StructuredData 
+      type="WebPage"
+      data={{
+        name: "Biodynamic Fuel | Sustainable Biofuel Solutions",
+        description: "Innovative biofuel solutions for sustainable energy",
+        url: "https://jasha.co.za/company/biodynamic-fuel"
+      }}
+    />
+
+    <StructuredData 
       type="Organization"
       data={{
-        name: "Bio Dynamic Fuel",
-        url: "https://www.jasha.co.za/company/biodynamic-fuel",
-        logo: "https://www.jasha.co.za/src/assets/bio_logo_no_bg.png",
-        description: "Leading provider of sustainable biodiesel solutions with patented B-Tech 40 technology",
-        foundingDate: "2005",
+        name: "Biodynamic Fuel",
+        url: "https://jasha.co.za/company/biodynamic-fuel",
+        logo: "https://jasha.co.za/src/assets/bio_logo_no_bg.png",
+        description: "Innovative biofuel solutions for sustainable energy",
+        foundingDate: "2020",
         socialLinks: [
-          "https://www.linkedin.com/company/jasha-consulting-services",
-          "https://www.facebook.com/jashaconsulting"
+          "https://www.linkedin.com/company/biodynamic-fuel",
+          "https://www.facebook.com/biodynamicfuel"
         ]
       }}
     />
@@ -98,18 +107,10 @@ const BiodynamicFuel = () => {
     <StructuredData 
       type="Service"
       data={{
-        name: "Biodiesel Production Solutions",
-        description: "Sustainable biodiesel production technology and solutions, featuring the patented B-Tech 40 system for efficient and environmentally responsible biodiesel manufacturing",
-        serviceType: "Renewable Energy"
-      }}
-    />
-
-    <StructuredData 
-      type="WebPage"
-      data={{
-        name: "Bio Dynamic Fuel - Sustainable Energy Solutions",
-        description: "Leading provider of sustainable biodiesel solutions with patented B-Tech 40 technology",
-        url: "https://www.jasha.co.za/company/biodynamic-fuel"
+        name: "Sustainable Biofuel Solutions",
+        description: "Innovative biofuel solutions for sustainable energy",
+        serviceType: "Biofuel Technology",
+        url: "https://jasha.co.za/company/biodynamic-fuel"
       }}
     />
     

@@ -120,35 +120,44 @@ const Knitwire = () => {
       <meta name="keywords" content="Knitwire, wire mesh solutions, mesh demisters, vane demisters, column internals, industrial mesh, South Africa" />
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content="Knitwire | Specialized Wire Mesh Solutions" />
-      <meta property="og:description" content="Leading provider of specialized wire mesh solutions for industrial applications. High-quality mesh demisters and column internals." />
+      <meta property="og:title" content="Knitwire Products | Industrial Wire Mesh Solutions" />
+      <meta property="og:description" content="Premium wire mesh solutions for distillation columns and scrubber units. Partnered with UK-based Knitwire Products for industrial applications." />
       <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://www.jasha.co.za/company/knitwire" />
-    <meta property="og:image" content="https://www.jasha.co.za/src/assets/knitwire_logo.png" />
+      <meta property="og:url" content="https://jasha.co.za/company/knitwire" />
+      <meta property="og:image" content="https://jasha.co.za/src/assets/knitwire_logo.png" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Knitwire - Wire Mesh Solutions" />
-      <meta name="twitter:description" content="Leading provider of specialized wire mesh solutions for industrial applications." />
-      <meta name="twitter:image" content="https://www.jasha.co.za/src/assets/knitwire_logo.png" />
+      <meta name="twitter:title" content="Knitwire Products | Industrial Wire Mesh Solutions" />
+      <meta name="twitter:description" content="Premium wire mesh solutions for distillation columns and scrubber units. Partnered with UK-based Knitwire Products for industrial applications." />
+      <meta name="twitter:image" content="https://jasha.co.za/src/assets/knitwire_logo.png" />
       
       {/* Canonical URL */}
-      <link rel="canonical" href="https://www.jasha.co.za/company/knitwire" />
+      <link rel="canonical" href="https://jasha.co.za/company/knitwire" />
       
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
-      <meta name="author" content="Knitwire" />
+      <meta name="author" content="Jasha Consulting Services" />
       <meta name="geo.region" content="ZA" />
       <meta name="geo.placename" content="South Africa" />
     </Helmet>
 
     <StructuredData 
+      type="WebPage"
+      data={{
+        name: "Knitwire Products | Industrial Wire Mesh Solutions",
+        description: "Premium wire mesh solutions for distillation columns and scrubber units",
+        url: "https://jasha.co.za/company/knitwire"
+      }}
+    />
+
+    <StructuredData 
       type="Organization"
       data={{
-        name: "Knitwire",
-        url: "https://www.jasha.co.za/company/knitwire",
-        logo: "https://www.jasha.co.za/src/assets/knitwire_logo.png",
-        description: "Leading provider of specialized wire mesh solutions for industrial applications",
+        name: "Knitwire Products",
+        url: "https://jasha.co.za/company/knitwire",
+        logo: "https://jasha.co.za/src/assets/knitwire_logo.png",
+        description: "Premium wire mesh solutions for distillation columns and scrubber units",
         foundingDate: "2005",
         socialLinks: [
           "https://www.linkedin.com/company/jasha-consulting-services",
@@ -160,18 +169,10 @@ const Knitwire = () => {
     <StructuredData 
       type="Service"
       data={{
-        name: "Wire Mesh Solutions",
-        description: "Specialized wire mesh solutions including mesh demisters, vane demisters, and column internals for various industries",
-        serviceType: "Industrial Wire Mesh"
-      }}
-    />
-
-    <StructuredData 
-      type="WebPage"
-      data={{
-        name: "Knitwire - Wire Mesh Solutions",
-        description: "Leading provider of specialized wire mesh solutions for industrial applications",
-        url: "https://www.jasha.co.za/company/knitwire"
+        name: "Industrial Wire Mesh Solutions",
+        description: "Premium wire mesh solutions for distillation columns and scrubber units",
+        serviceType: "Industrial Wire Mesh",
+        url: "https://jasha.co.za/company/knitwire"
       }}
     />
 

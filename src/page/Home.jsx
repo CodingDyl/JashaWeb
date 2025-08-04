@@ -9,9 +9,9 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Jasha Consulting Services",
-    "url": "https://www.jasha.co.za",
-    "logo": `https://www.jasha.co.za${logo_bg}`,
-    "description": "Industrial Fabrication and Engineering Solutions",
+    "url": "https://jasha.co.za",
+    "logo": `https://jasha.co.za${logo_bg}`,
+    "description": "Leading industrial engineering company specializing in stainless steel, mild steel, and plastic fabrication",
     "foundingDate": "2005",
     "address": {
       "@type": "PostalAddress",
@@ -41,12 +41,12 @@ const Home = () => {
 
   return (
     <>
-      <SEOHead
-        title="Jasha Consulting Services | Industrial Fabrication & Engineering Solutions"
-        description="Jasha Consulting Services - Your trusted partner in industrial fabrication, engineering solutions, and sustainable energy since 2005. Specializing in stainless steel, mild steel, and plastic fabrication."
-        keywords="Jasha Consulting, industrial fabrication, engineering solutions, stainless steel fabrication, mild steel fabrication, plastic fabrication, piping solutions, South Africa"
-        canonicalUrl="https://www.jasha.co.za"
-        ogImage="https://www.jasha.co.za/src/assets/logo-white.png"
+      <SEOHead 
+        title="Jasha Consulting Services | Industrial Engineering & Fabrication"
+        description="Leading industrial engineering company specializing in stainless steel, mild steel, and plastic fabrication for petro-chemical, chemical, sugar, paper, and precious metal industries."
+        keywords="industrial engineering, fabrication, stainless steel, mild steel, plastic fabrication, petro-chemical, chemical industry, sugar industry, paper industry, precious metal industry"
+        canonicalUrl="https://jasha.co.za"
+        ogImage="https://jasha.co.za/src/assets/logo-white.png"
         structuredData={structuredData}
       />
       
