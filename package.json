@@ -8,6 +8,8 @@
     "build": "vite build",
     "build:prerender": "vite build && npm run generate-static",
     "generate-static": "node scripts/generate-static.js",
+    "generate-sitemap": "node scripts/generate-sitemap.js",
+    "postbuild": "npm run generate-sitemap",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

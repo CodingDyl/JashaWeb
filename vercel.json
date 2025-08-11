@@ -7,6 +7,17 @@
     ],
     "redirects": [
       {
+        "source": "/:path*",
+        "has": [
+          {
+            "type": "host",
+            "value": "www.jasha.co.za"
+          }
+        ],
+        "destination": "https://jasha.co.za/:path*",
+        "permanent": true
+      },
+      {
         "source": "/sitemap.xml",
         "destination": "/sitemap.xml",
         "permanent": false
