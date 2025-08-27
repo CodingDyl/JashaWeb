@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import StructuredData from '../components/StructuredData';
 import { HiLightningBolt, HiCog, HiShieldCheck, HiChartBar, HiGlobe, HiStar } from 'react-icons/hi';
+import { SITE_CONFIG } from '../constants/siteConfig';
 
 const BiodynamicFuel = () => {
   const features = [
@@ -53,25 +54,25 @@ const BiodynamicFuel = () => {
   return (
     <>
     <Helmet>
-      <title>Bio Dynamic Fuel | Sustainable Energy Solutions</title>
-      <meta name="description" content="Bio Dynamic Fuel - Leading provider of sustainable biodiesel solutions. Our patented B-Tech 40 technology makes biodiesel production accessible and environmentally responsible." />
-      <meta name="keywords" content="Bio Dynamic Fuel, biodiesel production, sustainable energy, B-Tech 40, carbon neutral, waste cooking oil, South Africa" />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content="Biodynamic Fuel | Sustainable Biofuel Solutions" />
-      <meta property="og:description" content="Innovative biofuel solutions for sustainable energy. Biodynamic Fuel specializes in renewable fuel technologies and green energy solutions." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://jasha.co.za/company/biodynamic-fuel" />
-      <meta property="og:image" content="https://jasha.co.za/src/assets/bio_logo_no_bg.png" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Biodynamic Fuel | Sustainable Biofuel Solutions" />
-      <meta name="twitter:description" content="Innovative biofuel solutions for sustainable energy. Biodynamic Fuel specializes in renewable fuel technologies and green energy solutions." />
-      <meta name="twitter:image" content="https://jasha.co.za/src/assets/bio_logo_no_bg.png" />
+      <title>Biodynamic Fuel - Jasha Consulting Services</title>
+      <meta name="description" content="Discover Biodynamic Fuel, a leading industrial consulting company in South Africa specializing in sustainable energy solutions and industrial consulting services." />
+      <meta name="keywords" content="Biodynamic Fuel, sustainable energy, industrial consulting, South Africa, renewable energy solutions" />
       
       {/* Canonical URL */}
-      <link rel="canonical" href="https://jasha.co.za/company/biodynamic-fuel" />
+      <link rel="canonical" href={SITE_CONFIG.URLs.BIODYNAMIC_FUEL} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content="Biodynamic Fuel - Jasha Consulting Services" />
+      <meta property="og:description" content="Discover Biodynamic Fuel, a leading sustainable energy consulting company in South Africa." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={SITE_CONFIG.URLs.BIODYNAMIC_FUEL} />
+      <meta property="og:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/logo-white.png`} />
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Biodynamic Fuel - Jasha Consulting Services" />
+      <meta name="twitter:description" content="Discover Biodynamic Fuel, a leading sustainable energy consulting company in South Africa." />
+      <meta name="twitter:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/logo-white.png`} />
       
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />

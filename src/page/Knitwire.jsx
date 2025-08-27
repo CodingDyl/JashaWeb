@@ -14,6 +14,7 @@ import { Helmet } from 'react-helmet-async';
 import StructuredData from '../components/StructuredData';
 import { HiCheckCircle, HiDownload, HiCog, HiLightningBolt, HiShieldCheck } from 'react-icons/hi';
 // import FeatureModal from '../components/Modals/FeatureModal';
+import { SITE_CONFIG } from '../constants/siteConfig';
 
 function Feature({ icon: Icon, title, description, className, ...others }) {
   return (
@@ -115,25 +116,25 @@ const Knitwire = () => {
   return (
     <>
     <Helmet>
-      <title>Knitwire | Specialized Wire Mesh Solutions</title>
-      <meta name="description" content="Knitwire - Leading provider of specialized wire mesh solutions for industrial applications. Offering high-quality mesh demisters, vane demisters, and column internals for various industries." />
-      <meta name="keywords" content="Knitwire, wire mesh solutions, mesh demisters, vane demisters, column internals, industrial mesh, South Africa" />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content="Knitwire Products | Industrial Wire Mesh Solutions" />
-      <meta property="og:description" content="Premium wire mesh solutions for distillation columns and scrubber units. Partnered with UK-based Knitwire Products for industrial applications." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://jasha.co.za/company/knitwire" />
-      <meta property="og:image" content="https://jasha.co.za/src/assets/knitwire_logo.png" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Knitwire Products | Industrial Wire Mesh Solutions" />
-      <meta name="twitter:description" content="Premium wire mesh solutions for distillation columns and scrubber units. Partnered with UK-based Knitwire Products for industrial applications." />
-      <meta name="twitter:image" content="https://jasha.co.za/src/assets/knitwire_logo.png" />
+      <title>Knitwire - Jasha Consulting Services</title>
+      <meta name="description" content="Discover Knitwire, a leading industrial consulting company in South Africa specializing in stainless steel, mild steel, and plastic fabrication services." />
+      <meta name="keywords" content="Knitwire, industrial consulting, stainless steel, mild steel, plastic fabrication, South Africa" />
       
       {/* Canonical URL */}
-      <link rel="canonical" href="https://jasha.co.za/company/knitwire" />
+      <link rel="canonical" href={SITE_CONFIG.URLs.KNITWIRE} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content="Knitwire - Jasha Consulting Services" />
+      <meta property="og:description" content="Discover Knitwire, a leading industrial consulting company in South Africa." />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={SITE_CONFIG.URLs.KNITWIRE} />
+      <meta property="og:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/knitwire_logo.png`} />
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Knitwire - Jasha Consulting Services" />
+      <meta name="twitter:description" content="Discover Knitwire, a leading industrial consulting company in South Africa." />
+      <meta name="twitter:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/knitwire_logo.png`} />
       
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />

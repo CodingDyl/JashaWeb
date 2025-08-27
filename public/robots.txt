@@ -32,7 +32,7 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /node_modules/
 
-# Sitemap location
+# Sitemap location - Use canonical domain
 Sitemap: https://jasha.co.za/sitemap.xml
 
 # Crawl-delay for respectful crawling

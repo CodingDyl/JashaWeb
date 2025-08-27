@@ -16,16 +16,6 @@
         ],
         "destination": "https://jasha.co.za/:path*",
         "permanent": true
-      },
-      {
-        "source": "/sitemap.xml",
-        "destination": "/sitemap.xml",
-        "permanent": false
-      },
-      {
-        "source": "/robots.txt",
-        "destination": "/robots.txt",
-        "permanent": false
       }
     ],
     "headers": [
@@ -39,10 +29,6 @@
           {
             "key": "Cache-Control",
             "value": "public, max-age=3600"
-          },
-          {
-            "key": "X-Robots-Tag",
-            "value": "noindex"
           }
         ]
       },
