@@ -22,5 +22,8 @@ https://jasha.co.za/*/ https://jasha.co.za/:splat 301!
 /company/knitwire/ /company/knitwire 301!
 /company/biodynamic-fuel/ /company/biodynamic-fuel 301!
 
+# Handle 404 pages properly
+/404 /404.html 404!
+
 # Fallback for any other variations
 /* https://jasha.co.za/:splat 301! 

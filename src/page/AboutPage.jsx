@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navbar from '../components/Navbar';
 import About from '../components/About';
+import Footer from '../components/Footer/Footer';
 import { SITE_CONFIG } from '../constants/siteConfig';
 
 const AboutPage = () => {
@@ -27,7 +29,12 @@ const AboutPage = () => {
         <meta name="twitter:description" content="Learn about Jasha Consulting Services, a leading industrial consulting company in South Africa." />
         <meta name="twitter:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/logo-white.png`} />
       </Helmet>
-      <About />
+      
+      <div className="min-h-screen bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white">
+        <Navbar />
+        <About />
+        <Footer />
+      </div>
     </>
   );
 };

@@ -69,6 +69,19 @@
             "value": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
           }
         ]
+      },
+      {
+        "source": "/404",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex, nofollow"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
       }
     ]
 }
