@@ -16,7 +16,8 @@
         ],
         "destination": "https://jasha.co.za/:path*",
         "permanent": true
-      }
+      },
+      { "source": "/(.*)", "destination": "https://www.jasha.co.za/$1", "permanent": true }
     ],
     "headers": [
       {
