@@ -7,15 +7,9 @@
     ],
     "redirects": [
       {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "host",
-            "value": "www.jasha.co.za"
-          }
-        ],
-        "destination": "https://jasha.co.za/:path*",
-        "statusCode": 308
+        "source": "/(.*)",
+        "destination": "https://jasha.co.za/$1",
+        "permanent": true
       }
     ],
     "headers": [
