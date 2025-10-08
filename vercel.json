@@ -15,27 +15,7 @@
           }
         ],
         "destination": "https://jasha.co.za/:path*",
-        "permanent": true,
         "statusCode": 308
-      },
-      {
-        "source": "/:path*",
-        "has": [
-          {
-            "type": "host",
-            "value": "jasha.co.za"
-          }
-        ],
-        "missing": [
-          {
-            "type": "header",
-            "key": "x-forwarded-proto",
-            "value": "https"
-          }
-        ],
-        "destination": "https://jasha.co.za/:path*",
-        "permanent": true,
-        "statusCode": 301
       }
     ],
     "headers": [
@@ -90,7 +70,7 @@
           },
           {
             "key": "Link",
-            "value": "<https://jasha.co.za$1>; rel=\"canonical\""
+            "value": "<https://jasha.co.za/:path>; rel=\"canonical\""
           }
         ]
       },
