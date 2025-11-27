@@ -1,20 +1,13 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion';
-import { fadeIn } from '../utils/motion';
-import { styles } from '../styles';
 import { knitwire } from '../assets';
 import knitwire_products_pdf from '../../public/knitwire_products.pdf';
-// import { FeaturesAsymmetrical } from '../components/FeaturesSection/FeaturesAsymmetrical';
-// import { Faq } from '../components/FAQ/faq';
 import ImageListKnitwire from '../components/ImagesList/ImageListKnitwire';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import StructuredData from '../components/StructuredData';
-import { HiCheckCircle, HiDownload, HiCog, HiLightningBolt, HiShieldCheck } from 'react-icons/hi';
-// import FeatureModal from '../components/Modals/FeatureModal';
-import { SITE_CONFIG } from '../constants/siteConfig';
+import { HiCheckCircle, HiDownload, HiCog, HiShieldCheck } from 'react-icons/hi';
 
 function Feature({ icon: Icon, title, description, className, ...others }) {
   return (
@@ -118,64 +111,8 @@ const Knitwire = () => {
     <Helmet>
       <title>Knitwire - Jasha Consulting Services</title>
       <meta name="description" content="Discover Knitwire, a leading industrial consulting company in South Africa specializing in stainless steel, mild steel, and plastic fabrication services." />
-      <meta name="keywords" content="Knitwire, industrial consulting, stainless steel, mild steel, plastic fabrication, South Africa" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={SITE_CONFIG.URLs.KNITWIRE} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content="Knitwire - Jasha Consulting Services" />
-      <meta property="og:description" content="Discover Knitwire, a leading industrial consulting company in South Africa." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={SITE_CONFIG.URLs.KNITWIRE} />
-      <meta property="og:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/knitwire_logo.png`} />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Knitwire - Jasha Consulting Services" />
-      <meta name="twitter:description" content="Discover Knitwire, a leading industrial consulting company in South Africa." />
-      <meta name="twitter:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/knitwire_logo.png`} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Jasha Consulting Services" />
-      <meta name="geo.region" content="ZA" />
-      <meta name="geo.placename" content="South Africa" />
+      <link rel="canonical" href="https://jasha.co.za/company/knitwire" />
     </Helmet>
-
-    <StructuredData 
-      type="WebPage"
-      data={{
-        name: "Knitwire Products | Industrial Wire Mesh Solutions",
-        description: "Premium wire mesh solutions for distillation columns and scrubber units",
-        url: "https://jasha.co.za/company/knitwire"
-      }}
-    />
-
-    <StructuredData 
-      type="Organization"
-      data={{
-        name: "Knitwire Products",
-        url: "https://jasha.co.za/company/knitwire",
-        logo: "https://jasha.co.za/src/assets/knitwire_logo.png",
-        description: "Premium wire mesh solutions for distillation columns and scrubber units",
-        foundingDate: "2005",
-        socialLinks: [
-          "https://www.linkedin.com/company/jasha-consulting-services",
-          "https://www.facebook.com/jashaconsulting"
-        ]
-      }}
-    />
-
-    <StructuredData 
-      type="Service"
-      data={{
-        name: "Industrial Wire Mesh Solutions",
-        description: "Premium wire mesh solutions for distillation columns and scrubber units",
-        serviceType: "Industrial Wire Mesh",
-        url: "https://jasha.co.za/company/knitwire"
-      }}
-    />
 
     <div className="min-h-screen bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white">
       <Navbar />

@@ -1,18 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { fadeIn } from '../utils/motion';
-import { styles } from '../styles';
 import { logo_bg } from '../assets';
-// import { FeaturesAsymmetrical } from '../components/FeaturesSection/FeaturesAsymmetrical';
-// import { Faq } from '../components/FAQ/faq';
 import ImageListJasha from '../components/ImagesList/ImageListJasha';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import StructuredData from '../components/StructuredData';
-import { HiCog, HiLightningBolt, HiShieldCheck, HiChartBar, HiGlobe } from 'react-icons/hi';
-import { SITE_CONFIG } from '../constants/siteConfig';
+import { HiCog, HiLightningBolt, HiShieldCheck } from 'react-icons/hi';
 
 const Jasha = () => {
   const services = [
@@ -48,48 +42,8 @@ const Jasha = () => {
     <Helmet>
       <title>Jasha Company - Jasha Consulting Services</title>
       <meta name="description" content="Discover Jasha, a leading industrial consulting company in South Africa specializing in stainless steel, mild steel, and plastic fabrication services." />
-      <meta name="keywords" content="Jasha company, industrial consulting, stainless steel, mild steel, plastic fabrication, South Africa" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={SITE_CONFIG.URLs.JASHA} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content="Jasha Company - Jasha Consulting Services" />
-      <meta property="og:description" content="Discover Jasha, a leading industrial consulting company in South Africa." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={SITE_CONFIG.URLs.JASHA} />
-      <meta property="og:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/logo-white.png`} />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Jasha Company - Jasha Consulting Services" />
-      <meta name="twitter:description" content="Discover Jasha, a leading industrial consulting company in South Africa." />
-      <meta name="twitter:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/logo-white.png`} />
+      <link rel="canonical" href="https://jasha.co.za/company/jasha" />
     </Helmet>
-
-    <StructuredData 
-      type="WebPage"
-      data={{
-        name: "Jasha Consulting Services | Industrial Engineering & Fabrication",
-        description: "Leading industrial engineering company specializing in stainless steel, mild steel, and plastic fabrication",
-        url: "https://jasha.co.za/company/jasha"
-      }}
-    />
-
-    <StructuredData 
-      type="Organization"
-      data={{
-        name: "Jasha Consulting Services",
-        url: "https://jasha.co.za/company/jasha",
-        logo: "https://jasha.co.za/src/assets/logo-white.png",
-        description: "Leading industrial engineering company specializing in stainless steel, mild steel, and plastic fabrication",
-        foundingDate: "2005",
-        socialLinks: [
-          "https://www.linkedin.com/company/jasha-consulting-services",
-          "https://www.facebook.com/jashaconsulting"
-        ]
-      }}
-    />
     
     <div className="min-h-screen bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white">
       <Navbar />

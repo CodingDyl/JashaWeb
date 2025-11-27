@@ -1,18 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { fadeIn } from '../utils/motion';
-import { styles } from '../styles';
 import { bio_logo } from '../assets';
-// import { FeaturesAsymmetrical } from '../components/FeaturesSection/FeaturesAsymmetrical';
-// import { Faq } from '../components/FAQ/faq';
 import ImageListBio from '../components/ImagesList/ImageListBio';
 import Footer from '../components/Footer/Footer';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import StructuredData from '../components/StructuredData';
 import { HiLightningBolt, HiCog, HiShieldCheck, HiChartBar, HiGlobe, HiStar } from 'react-icons/hi';
-import { SITE_CONFIG } from '../constants/siteConfig';
 
 const BiodynamicFuel = () => {
   const features = [
@@ -55,65 +49,9 @@ const BiodynamicFuel = () => {
     <>
     <Helmet>
       <title>Biodynamic Fuel - Jasha Consulting Services</title>
-      <meta name="description" content="Discover Biodynamic Fuel, a leading industrial consulting company in South Africa specializing in sustainable energy solutions and industrial consulting services." />
-      <meta name="keywords" content="Biodynamic Fuel, sustainable energy, industrial consulting, South Africa, renewable energy solutions" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={SITE_CONFIG.URLs.BIODYNAMIC_FUEL} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content="Biodynamic Fuel - Jasha Consulting Services" />
-      <meta property="og:description" content="Discover Biodynamic Fuel, a leading sustainable energy consulting company in South Africa." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={SITE_CONFIG.URLs.BIODYNAMIC_FUEL} />
-      <meta property="og:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/logo-white.png`} />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Biodynamic Fuel - Jasha Consulting Services" />
-      <meta name="twitter:description" content="Discover Biodynamic Fuel, a leading sustainable energy consulting company in South Africa." />
-      <meta name="twitter:image" content={`${SITE_CONFIG.ASSETS_BASE}/src/assets/logo-white.png`} />
-      
-      {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Biodynamic Fuel" />
-      <meta name="geo.region" content="ZA" />
-      <meta name="geo.placename" content="South Africa" />
+      <meta name="description" content="Discover Biodynamic Fuel, a leading industrial consulting company in South Africa specializing in sustainable energy solutions." />
+      <link rel="canonical" href="https://jasha.co.za/company/biodynamic-fuel" />
     </Helmet>
-
-    <StructuredData 
-      type="WebPage"
-      data={{
-        name: "Biodynamic Fuel | Sustainable Biofuel Solutions",
-        description: "Innovative biofuel solutions for sustainable energy",
-        url: "https://jasha.co.za/company/biodynamic-fuel"
-      }}
-    />
-
-    <StructuredData 
-      type="Organization"
-      data={{
-        name: "Biodynamic Fuel",
-        url: "https://jasha.co.za/company/biodynamic-fuel",
-        logo: "https://jasha.co.za/src/assets/bio_logo_no_bg.png",
-        description: "Innovative biofuel solutions for sustainable energy",
-        foundingDate: "2020",
-        socialLinks: [
-          "https://www.linkedin.com/company/biodynamic-fuel",
-          "https://www.facebook.com/biodynamicfuel"
-        ]
-      }}
-    />
-
-    <StructuredData 
-      type="Service"
-      data={{
-        name: "Sustainable Biofuel Solutions",
-        description: "Innovative biofuel solutions for sustainable energy",
-        serviceType: "Biofuel Technology",
-        url: "https://jasha.co.za/company/biodynamic-fuel"
-      }}
-    />
     
     <div className="min-h-screen bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white">
       <Navbar />
